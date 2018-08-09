@@ -4,8 +4,8 @@
 This project contains a collection of sample applications for SAP Cloud Platform Workflow. The purpose of providing sample applications is to demonstrate the capabilities of SAP Cloud Platform Workflow and are intended to be used as a reference for the development of workflow-based applications. 
 
 The following samples are available in this project:
-1. SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding
-2. Enable collaboration in SAP Cloud Platform Workflow with SAP Jam. 
+1. [SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding](https://github.com/SAP/cloud-workflow-samples/tree/0.1/onboarding-sample)
+2. [Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/0.1/collaboration-sample). 
 
 ## Requirements
 For all the sample applications, you would need the following:
@@ -18,13 +18,13 @@ For the requirements of individual sample applications, you can refer to the res
 
 ## Download and Installation
 Refer to the README file of following sample applications:
-1. SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding
-2. Enable collaboration in SAP Cloud Platform Workflow with SAP Jam. 
+1. [SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding](https://github.com/SAP/cloud-workflow-samples/tree/0.1/onboarding-sample)
+2. [Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/0.1/collaboration-sample). 
 
 ## Configuration
 Refer to the README file of following sample applications:
-1. SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding
-2. Enable collaboration in SAP Cloud Platform Workflow with SAP Jam. 
+1. [SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding](https://github.com/SAP/cloud-workflow-samples/tree/0.1/onboarding-sample)
+2. [Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/0.1/collaboration-sample). 
 
 ## Known Issues
 No known issues.
