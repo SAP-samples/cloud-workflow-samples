@@ -1,0 +1,50 @@
+{
+  "welcomeFile": "/appstartui/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.52.7"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.52.7"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/sap_jam_odata",
+      "target": {
+        "type": "destination",
+        "name": "sap_jam_odata"
+      },
+      "description": "SAP JAM"
+    },
+    {
+      "path": "/bpmworkflowruntime",
+      "target": {
+        "type": "destination",
+        "name": "bpmworkflowruntime"
+      },
+      "description": "SAP Cloud Platform Workflow"
+    },
+    {
+      "path": "/bpmrulesruntime",
+      "target": {
+        "type": "destination",
+        "name": "bpmrulesruntime"
+      },
+      "description": "SAP Cloud Platform Business Rules"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}

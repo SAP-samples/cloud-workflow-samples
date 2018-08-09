@@ -1,0 +1,129 @@
+<core:View xmlns="sap.uxap" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout"
+	xmlns:core="sap.ui.core.mvc" xmlns:m="sap.m" controllerName="com.sap.cloud.workflow.samples.audit.controller.approvals" displayBlock="true">
+	<m:App id="idAppControl" height="90%">
+		<m:pages>
+			<m:Page title="{i18n>title}" showHeader="false">
+				<m:content>
+					<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" alwaysShowContentHeader="true">
+						<headerTitle>
+							<ObjectPageHeader objectTitle="{/context/task/Title}" objectSubtitle="{/context/task/Description}"/>
+						</headerTitle>
+						<headerContent>
+							<layout:VerticalLayout>
+								<m:ObjectStatus title = "Created By" text="{/context/task/CreatedBy}"/>
+								<m:ObjectStatus title = "Created On" text="{/context/task/CreatedOn}"/>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<m:ObjectStatus title = "Status" text="{/context/task/Status}"/>
+								<m:ObjectStatus title="Priority" text="{/context/task/Priority}" state="{/context/task/PriorityState}"/>
+							</layout:VerticalLayout>
+						</headerContent>
+						<sections>
+							<ObjectPageSection title="Info">
+								<subSections>
+									<ObjectPageSubSection title="Information">
+										<blocks>
+											<f:SimpleForm id="SimpleFormDisplay471" editable="false" layout="ResponsiveLayout">
+												<f:content>
+													<m:Label text="Document Number"/>
+													<m:Text text="{/context/Document/DocumentNumber}"/>
+													<m:Label text="Document type"/>
+													<m:Text text="{/context/Document/Type}"/>
+													<m:Label text="Business Unit"/>
+													<m:Text text="{/context/Document/BusinessUnit}"/>
+													<m:Label text="Project Name"/>
+													<m:Text text="{/context/Document/ProjectName}"/>
+													<m:Label text="Project Description"/>
+													<m:Text text="{/context/Document/ProjectDesc}"/>
+													<m:Label text="Classfication"/>
+													<m:Text text="{/context/Document/Classification}"/>
+													<m:Label text="Quater/Year"/>
+													<m:Text text="{/context/Document/Quarter}/{/context/Document/Year}"/>
+													<m:Label text="Publishing Deadline"/>
+													<m:Text text="{/context/Document/PublishingDeadline}"/>
+													<m:Label text="Document Status"/>
+													<m:Text text="{/context/Document/Status}"/>
+													<m:Label text="Link to Document"/>
+													<m:Link text="{/context/Document/JAMProperties/Name}" target="_blank"
+														href="{path:'/context/Document/JAMProperties/Id',formatter:'.urlFormater'}"/>
+												</f:content>
+											</f:SimpleForm>
+										</blocks>
+									</ObjectPageSubSection>
+								</subSections>
+							</ObjectPageSection>
+							<ObjectPageSection title="Reviewers">
+								<subSections>
+									<ObjectPageSubSection title="Reviewers">
+										<blocks>
+											<m:Table noDataText="No Reviewers Listed" id="__table0">
+												<m:items>
+													<m:ColumnListItem >
+														<m:cells>
+															<m:Text text="Tax Department"/>
+															<m:Text text="{/context/Document/Reviewers/Tax/Name}"/>
+															<m:Text text="{/context/Document/Reviewers/Tax/ApprovalStatusText}"/>
+														</m:cells>
+													</m:ColumnListItem>
+													<m:ColumnListItem >
+														<m:cells>
+															<m:Text text="Business Analysts"/>
+															<m:Text text="{/context/Document/Reviewers/HeadOfBA/Name}"/>
+															<m:Text text="{/context/Document/Reviewers/HeadOfBA/ApprovalStatusText}"/>
+														</m:cells>
+													</m:ColumnListItem>
+													<m:ColumnListItem >
+														<m:cells>
+															<m:Text text="External Auditors"/>
+															<m:Text text="{/context/Document/Reviewers/ExternalAuditors/Name}"/>
+															<m:Text text="{/context/Document/Reviewers/ExternalAuditors/ApprovalStatusText}"/>
+														</m:cells>
+													</m:ColumnListItem>
+													<m:ColumnListItem >
+														<m:cells>
+															<m:Text text="Accounting Department"/>
+															<m:Text text="{/context/Document/Reviewers/Accounting/Name}"/>
+															<m:Text text="{/context/Document/Reviewers/Accounting/ApprovalStatusText}"/>
+														</m:cells>
+													</m:ColumnListItem>
+												</m:items>
+												<m:columns>
+													<m:Column id="__column0">
+														<m:header>
+															<m:Label text="Department" id="__label22"/>
+														</m:header>
+													</m:Column>
+													<m:Column id="__column1">
+														<m:header>
+															<m:Label text="Reviewer Name" id="__label23"/>
+														</m:header>
+													</m:Column>
+													<m:Column id="__column2">
+														<m:header>
+															<m:Label text="Status" id="__label24"/>
+														</m:header>
+													</m:Column>
+												</m:columns>
+											</m:Table>
+										</blocks>
+									</ObjectPageSubSection>
+								</subSections>
+							</ObjectPageSection>
+							<ObjectPageSection title="Comments">
+								<subSections>
+									<ObjectPageSubSection title="Comments">
+										<blocks>
+											<m:VBox id="vboxID" direction="Column" fitContainer="true">
+												<html:div id="jamContainer" style="height:900px;"></html:div>
+											</m:VBox>
+										</blocks>
+									</ObjectPageSubSection>
+								</subSections>
+							</ObjectPageSection>
+						</sections>
+					</ObjectPageLayout>
+				</m:content>
+			</m:Page>
+		</m:pages>
+	</m:App>
+</core:View>
