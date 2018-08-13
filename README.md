@@ -1,11 +1,14 @@
+
 # SAP Cloud Platform Workflow Sample Applications
 
 ## Description
-This project contains a collection of sample applications for SAP Cloud Platform Workflow. The purpose of providing sample applications is to demonstrate the capabilities of SAP Cloud Platform Workflow and are intended to be used as a reference for the development of workflow-based applications. 
+[SAP Cloud Platform Workflow](https://cloudplatform.sap.com/capabilities/product-info.SAP-Cloud-Platform-Workflow.df696e5a-d973-4ecd-8d8d-532d60aa1921.html) allows you to build, run, and manage workflows, from simple approvals to end-to-end processes that can span across different organizations and applications. With an inbox application and custom-built user interfaces, you involve end-users into business processes for decision making and data entry.
+
+This *SAP Cloud Platform Workflow samples project* contains a collection of workflow applications to demonstrate the usage of SAP Cloud Platform Workflow in the context of extending the standard processes in SAP SuccessFactors, SAP S/4HANA, SAP Jam, SAP Concur, etc. They are intended to be used as a reference content for the development of workflow-based applications.
 
 The following samples are available in this project:
-1. [SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding](https://github.com/SAP/cloud-workflow-samples/tree/0.1/onboarding-sample)
-2. [Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/0.1/collaboration-sample). 
+1. [SAP Cloud Platform Workflow Extension for **SAP SuccessFactors** new hire **Onboarding**](https://github.com/SAP/cloud-workflow-samples/tree/master/onboarding-sample)
+2. [Enable **collaboration** in SAP Cloud Platform Workflow with **SAP Jam**](https://github.com/SAP/cloud-workflow-samples/tree/master/collaboration-sample). 
 
 ## Requirements
 For all the sample applications, you would need the following:
@@ -18,13 +21,13 @@ For the requirements of individual sample applications, you can refer to the res
 
 ## Download and Installation
 Refer to the README file of following sample applications:
-1. [SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding](https://github.com/SAP/cloud-workflow-samples/tree/0.1/onboarding-sample)
-2. [Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/0.1/collaboration-sample). 
+1. [SAP Cloud Platform Workflow Extension for **SAP SuccessFactors** new hire **Onboarding**](https://github.com/SAP/cloud-workflow-samples/tree/master/onboarding-sample)
+2. [Enable **collaboration** in SAP Cloud Platform Workflow with **SAP Jam**](https://github.com/SAP/cloud-workflow-samples/tree/master/collaboration-sample). 
 
 ## Configuration
 Refer to the README file of following sample applications:
-1. [SAP Cloud Platform Workflow Extension for SAP SuccessFactors New Hire Onboarding](https://github.com/SAP/cloud-workflow-samples/tree/0.1/onboarding-sample)
-2. [Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/0.1/collaboration-sample). 
+1. [SAP Cloud Platform Workflow Extension for **SAP SuccessFactors** new hire **Onboarding**](https://github.com/SAP/cloud-workflow-samples/tree/master/onboarding-sample)
+2. [Enable **collaboration** in SAP Cloud Platform Workflow with **SAP Jam**](https://github.com/SAP/cloud-workflow-samples/tree/master/collaboration-sample). 
 
 ## Known Issues
 No known issues.
