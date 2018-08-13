@@ -1,0 +1,63 @@
+{
+	"SAPJamConfigurations": {
+		"jamBaseURL": "",
+		"jamFeedBootstrapUrl":"",
+		"jamAccountFeedEndpoint": "",
+		"jamGroupID": "",
+		"jamApprovalFolderID": "",
+		"jamFinalFolderID": ""
+	},
+	"Requestor": {
+		"Email": "stevecook@sapdemo.com",
+		"UserID": "",
+		"Name": "Steve Cook"
+	},
+	"Approvers": {
+		"Tax": [{
+			"Email": "tclark@sapdemo.com",
+			"UserID": "",
+			"Name": "Thomas Clark"
+		}, {
+			"Email": "wscott@sapdemo.com",
+			"UserID": "",
+			"Name": "Wendy Scott"
+		}],
+		"Accounting": [{
+			"Email": "jeff.blackwell@sapdemo.com",
+			"UserID": "",
+			"Name": "Jeff Blackwell"
+		}, {
+			"Email": "john.edrich@sapdemo.com",
+			"UserID": "",
+			"Name": "John Edrich"
+		}],
+		"HeadOfBA": [{
+			"Email": "kevin.hart@sapdemo.com",
+			"UserID": "",
+			"Name": "Kevin Hart"
+		}, {
+			"Email": "denny.harris@sapdemo.com",
+			"UserID": "",
+			"Name": "Denny Harris"
+		}],
+		"ExternalAuditors": [{
+			"Email": "sdesikan@sapdemo.com",
+			"UserID": "",
+			"Name": "Sudarsan Desikan"
+		}, {
+			"Email": "insalesrep02@ondemand.com",
+			"UserID": "",
+			"Name": "Amit Gupta"
+		}],
+		"ExternalAuditHeads": [{
+			"Email": "mike.adams@sapdemo.com",
+			"UserID": "",
+			"Name": "Mike Adams"
+		}],
+		"HeadOfGroupReporting": [{
+			"Email": "desaleslife@sapdemo.com",
+			"UserID": "",
+			"Name": "Peter Schmidt"
+		}]
+	}
+}

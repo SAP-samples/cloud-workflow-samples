@@ -1,0 +1,151 @@
+<mvc:View controllerName="com.sap.cloud.workflow.samples.DocumentAuditProcess.controller.startApproval"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified">
+	<App>
+		<pages>
+			<Page title="{i18n>title}" id="_docReviewePage">
+				<content>
+					<l:VerticalLayout width="100%">
+						<l:content>
+							<Panel id="_docPropsPanel">
+								<headerToolbar>
+									<Toolbar>
+										<Title level="H2" text="{i18n>DocumentDetailsHeader}"/>
+									</Toolbar>
+								</headerToolbar>
+								<f:Form editable="true">
+									<f:layout>
+										<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+											emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false"/>
+									</f:layout>
+									<f:FormContainer expanded="true">
+										<f:formElements>
+											<f:FormElement label="{i18n>DocumentNumber}">
+												<Input id="_docNumberInput" value="{/Document/DocumentNumber}" enabled="false"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>DocumentType}">
+												<ComboBox value="{/Document/Type}" selectionChange="handleDocPropSelectionChange" id="_docTypeCombo" required="true">
+													<items>
+														<core:Item key="ATP" text="Accounting Topic Paper"/>
+														<core:Item key="APP" text="Accounting Policy Paper"/>
+														<core:Item key="ASP" text="Accounting Support Paper"/>
+														<core:Item key="NFI" text="Note for Information"/>
+													</items>
+												</ComboBox>
+											</f:FormElement>
+											<f:FormElement label="{i18n>BusinessUnit}">
+												<ComboBox value="{/Document/BusinessUnit}" selectionChange="handleDocPropSelectionChange" id="_businessTypeCombo" required="true">
+													<items>
+														<core:Item key="Upstream" text="Upstream"/>
+														<core:Item key="IntegratedGas" text="Integrated Gas"/>
+														<core:Item key="Downstream" text="Downstream"/>
+														<core:Item key="Trading" text="Trading"/>
+														<core:Item key="Corporate" text="Corporate"/>
+														<core:Item key="All" text="All"/>
+													</items>
+												</ComboBox>
+											</f:FormElement>
+											<f:FormElement label="{i18n>Classification}">
+												<ComboBox value="{/Document/Classification}" selectionChange="handleDocPropSelectionChange" id="_classicficationCombo" required="true">
+													<items>
+														<core:Item key="Secret" text="Secret"/>
+														<core:Item key="Confidential" text="Confidential"/>
+														<core:Item key="Restricted" text="Restricted"/>
+														<core:Item key="Unclassified" text="Unclassified"/>
+													</items>
+												</ComboBox>
+											</f:FormElement>
+											<f:FormElement label="{i18n>QuarterYr}">
+												<HBox>
+													<ComboBox value="{/Document/Quarter}" selectionChange="handleDocPropSelectionChange" id="_quarterCombo" required="true">
+														<items>
+															<core:Item key="Q1" text="Q1"/>
+															<core:Item key="Q2" text="Q2"/>
+															<core:Item key="Q3" text="Q3"/>
+															<core:Item key="Q4" text="Q4"/>
+														</items>
+													</ComboBox>
+													<Label text="" class="addPropStyle"/>
+													<ComboBox value="{/Document/Year}" selectionChange="handleDocPropSelectionChange" id="_yearCombo" required="true">
+														<items>
+															<core:Item key="2018" text="2018"/>
+															<core:Item key="2019" text="2019"/>
+															<core:Item key="2020" text="2020"/>
+														</items>
+													</ComboBox>
+												</HBox>
+											</f:FormElement>
+											<f:FormElement label="{i18n>Deadline}">
+												<DatePicker id="_deadlineDatePicker" value="{/Document/PublishingDeadline}" valueFormat="yyyy-MM-dd" displayFormat="long"
+													change="handleDateChange" class="sapUiSmallMarginBottom" required="true"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>ProjectName}">
+												<Input id="_projNameInput" value="{/Document/ProjectName}" change="onProjectPropChange"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>ProjectDesc}">
+												<Input id="_projDescInput" value="{/Document/ProjectDesc}" change="onProjectPropChange"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>FileName}">
+												<u:FileUploader required="true" id="_JamFileUploader" width="100%" name="JAMFileUpload" value="{/Document/FileName}"/>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+									<f:FormContainer>
+										<f:FormElement>
+											<Toolbar>
+												<Title level="H4" text="{i18n>SelectReviewersHeader}"/>
+											</Toolbar>
+										</f:FormElement>
+										<f:formElements>
+											<f:FormElement label="{i18n>TaxTeamReviewerLbl}">
+												<ComboBox id="Tax" required="true" change="onReviewerNameChange" showSecondaryValues="true"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>AccountingTeamReviewerLbl}">
+												<ComboBox id="Accounting" required="true" change="onReviewerNameChange" showSecondaryValues="true"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>HeadOfBAReviewerLbl}">
+												<ComboBox id="HeadOfBA" required="true" change="onReviewerNameChange" showSecondaryValues="true"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>FinanceTeamReviewerLbl}">
+												<ComboBox id="ExternalAuditors" required="true" change="onReviewerNameChange" showSecondaryValues="true"/>
+											</f:FormElement>
+											<f:FormElement>
+												<Toolbar>
+													<Title level="H4" text="{i18n>SelectApproversHeader}"/>
+												</Toolbar>
+											</f:FormElement>
+											<f:FormElement label="{i18n>AuditMgrsReviewerLbl}">
+												<ComboBox id="ExternalAuditHeads" required="true" change="onApproverNameChange" showSecondaryValues="true"/>
+											</f:FormElement>
+											<f:FormElement label="{i18n>GrpHeadsReviewerLbl}">
+												<ComboBox id="HeadOfGroupReporting" required="true" change="onApproverNameChange" showSecondaryValues="true"/>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+								</f:Form>
+							</Panel>
+						</l:content>
+						<l:content>
+							<Panel id="_commentsPanel">
+								<headerToolbar>
+									<Toolbar>
+										<Title level="H2" text="{i18n>AdditionalPropsHeader}"/>
+									</Toolbar>
+								</headerToolbar>
+								<TextArea rows="3" width="100%" id="_commentsTextArea" value="{/Document/RequesterComments}"/>
+							</Panel>
+						</l:content>
+					</l:VerticalLayout>
+				</content>
+				<footer>
+					<Toolbar id="actionsToolbar">
+						<ToolbarSpacer/>
+						<Button id="uploadButton" text="{i18n>StartApprovalBtn}" type="Accept" press="uploadDocumentToJAM"/>
+						<Button id="cancelButton" text="{i18n>ResetBtn}" type="Reject" press="resetData"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

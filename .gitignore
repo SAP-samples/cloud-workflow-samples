@@ -1,0 +1,6 @@
+# Ignore Eclipse project and settings files
+.classpath
+.settings
+
+# Ignore Mac files
+.DS_Store

@@ -1,0 +1,12 @@
+This program references the following third party open source or other free download components.
+The third party licensors of these components may provide additional license rights, terms and conditions 
+and/or require certain notices as described below.
+
+Json-simple (https://code.google.com/archive/p/json-simple)
+Licensed under Apache License, Version 2.0 - http://www.apache.org/licenses/LICENSE-2.0
+
+Spring Framework (https://projects.spring.io/spring-framework/)
+Licensed under Apache License, Version 2.0 - http://www.apache.org/licenses/LICENSE-2.0 
+
+API for SAP Cloud Platform (com.sap.cloud)
+Licensed under Apache License, Version 2.0 - http://www.apache.org/licenses/LICENSE-2.0

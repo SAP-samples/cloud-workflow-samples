@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "com.sap.cloud.workflow.samples.DocumentAuditProcess",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/appstartui",
+        "appUrl": "#DocumentAuditProcess-Display",
+        "navigationComponentName": "com.sap.cloud.workflow.samples.DocumentAuditProcess",
+        "intentSemanticObject": "DocumentAuditProcess",
+        "intentAction": "Display",
+        "html5ApplicationName": "documentauditprocess",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "5df8b5ce-4525-4e86-9e7c-c8c4df2f37dd"
+        ],
+        "contentPackages": [
+            "00000000-0000-2222-0000-00000000"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Start the Workflow",
+        "subtitle": "Sample App",
+        "searchKeywords": "Start the Workflow,Sample App",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
