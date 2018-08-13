@@ -6,9 +6,11 @@
 
 This *SAP Cloud Platform Workflow samples project* contains a collection of workflow applications to demonstrate the usage of SAP Cloud Platform Workflow in the context of extending the standard processes in SAP SuccessFactors, SAP S/4HANA, SAP Jam, SAP Concur, etc. They are intended to be used as a reference content for the development of workflow-based applications.
 
-The following samples are available in this project:
-1. [SAP Cloud Platform Workflow Extension for **SAP SuccessFactors** new hire **Onboarding**](https://github.com/SAP/cloud-workflow-samples/tree/master/onboarding-sample)
-2. [Enable **collaboration** in SAP Cloud Platform Workflow with **SAP Jam**](https://github.com/SAP/cloud-workflow-samples/tree/master/collaboration-sample). 
+### List of sample projects
+|Application|Scenario|Scenario Description|
+|---|---|---|
+|SAP SuccessFactors|[Extend SAP SuccessFactors new hire on-boarding](https://github.com/SAP/cloud-workflow-samples/tree/master/onboarding-sample)|Human resources are still the biggest assets in most industry sectors. Many organizations invest significantly on recruiting the best talent and subsequently on employee on-boarding. Therefore, proper resource utilization becomes imperative for any company’s success. However, employee on-boarding varies across industries and countries and it takes days – or even weeks – for a new employee to become productive. Automating some of these industry specific on-boarding processes will help managers reduce confusion and increase productivity.|
+|SAP Jam|[Enable collaboration in SAP Cloud Platform Workflow with SAP Jam](https://github.com/SAP/cloud-workflow-samples/tree/master/collaboration-sample)|See how to Automate a document-centric process (where the documents have a crucial role in creating value for the business) to help business users to avoid lots of manual work and exchange of ideas or feedback through emails or other mediums. You could even start a custom approval process whenever a document is uploaded in SAP Jam.|
 
 ## Requirements
 For all the sample applications, you would need the following:
