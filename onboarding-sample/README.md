@@ -8,7 +8,7 @@ This sample project contains the SAPUI5 application used for the user tasks and 
 [Extend SAP SuccessFactors with SAP Cloud Platform Workflow - Part 2/2](https://blogs.sap.com/2017/08/22/extend-successfactors-with-sap-cloud-platform-workflow-part-22/)
 
 #### Solution Diagram
-![Solution Diagram](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/onboardingSolutionDiagram.png?raw=true)
+![Solution Diagram](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/onboardingSolutionDiagram.png?raw=true)
 
 1. As soon as a new hire is recruited, a New Hire event triggered in SAP SuccessFactors. A buddy is assigned as part of the standard process.
 2. SuccessFactors intelligent service observes the new hire event and starts the custom extension which is realized by SAP Cloud Platform Workflow service.
@@ -20,7 +20,7 @@ This sample project contains the SAPUI5 application used for the user tasks and 
 8. The buddy’s decision to confirm or change the equipment is submitted to the workflow to be further processed.
 
 #### Workflow Model
-![Workflow Model](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/workflow.jpg?raw=true)
+![Workflow Model](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/workflow.jpg?raw=true)
 
 ## Requirements
 1. SAP Cloud Platform Tenant -  If you do not have one, then you could get your hands on to [a free trial account](http://cloudplatform.sap.com/try.html).
@@ -51,7 +51,7 @@ A business rule is used to determine equipment using SAP Cloud Platform Business
 2. Open the project and navigate to *SuccessFactorsOnboarding.workflow* under the *workflows* folder. 
 3. An email is sent to the buddy if he has not completed the 'Confirm or Change Equipment' task within the due date. Modify the To and CC email addresses to receive emails. 
 
-![SAP Cloud Platform Destination](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/emailTask.jpg?raw=true)
+![SAP Cloud Platform Destination](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/emailTask.jpg?raw=true)
 
 4. If you do not have any procurement API to work with, for experiencing workflows, you can remove the *Order Equipment* service task and proceed.
 6. After saving the workflow, right-click the *SuccessFactorsOnboarding.workflow* and choose *Deploy* --> *Deploy to SAP Cloud Platform Workflow*.
@@ -62,13 +62,13 @@ Since the buddy's userId is as available in SAP SuccessFactors, assigning them t
 2. Approve Equipment.
 3. Accept Workplace for New Hire.
 
-![Modify Recipients](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/modifyRecipients.jpg?raw=true)
+![Modify Recipients](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/modifyRecipients.jpg?raw=true)
 
 ## Configuration
 ### Create Destinations in SAP Cloud Platform
 #### SuccessFactors Destination
 Before you import the downloaded .zip files, you have to create the destination for connecting to SAP SuccessFactors from SAP Cloud Platform. Create a destination with the name **SFSF** to connect to SAP SuccessFactors as shown in the image below. This destination will be used in the Workflow model.
-![SAP SuccessFactors Destination](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/Destination.jpg?raw=true)
+![SAP SuccessFactors Destination](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/Destination.jpg?raw=true)
 > Note: If you wish to change the destination name, make sure you change the destination name in the workflow model as well (two service tasks to get employee & buddy details)
 
 #### Email Destination
@@ -84,7 +84,7 @@ Proxy Type | Internet
 Authentication | BasicAuthentication
 User & Password | User ID and credentials which has the authorization to execute rules. Refer to help document for the [roles required for runtime services of business rules](https://help.sap.com/viewer/9d7cfeaba766433eaea8a29fdb8a688c/Cloud/en-US/d21c818d46af4f8dbb1aa80a5bb12835.html).
 
-![SAP CP Business Rules Destination](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/rulesDestination.jpg?raw=true)
+![SAP CP Business Rules Destination](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/rulesDestination.jpg?raw=true)
 
 ### Executing the SAP SuccessFactors Employee On-boarding Extension Workflow
 #### **Starting a workflow instance**
@@ -120,13 +120,13 @@ Once the workflow instance has been started and is running without errors, a tas
 
 > Note that the recipient of this task is determined by getting all the employees who report to the manager of the new hire. In case different IdP is used, then refer to the footnote **Different IdP**.
 
-> ![enter image description here](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/Recipients.jpg?raw=true)
+> ![enter image description here](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/Recipients.jpg?raw=true)
 
 The buddy can verify the equipment proposed by the business rule, and can add/remove additional equipment as needed for the new hire.
 ##### Approve Equipment - Task for Manager
 Once the buddy confirms the equipment required for the new hire, a task is created for the new hire's manager to approve or reject the proposed equipment. If the manager accepts the task, then it moves forward. If the manager rejects the task, then the task goes back to the buddy (previous task) to modify the proposed list of equipment.
 
-![Approve Equipment](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/approveEquipment.jpg?raw=true)
+![Approve Equipment](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/approveEquipment.jpg?raw=true)
 #### Confirm Order Fulfilment
 Once the manager approves the equipment needed, a service is called to place the order in the procurement system. Until confirmation is received that the order is fulfilled, the workflow will be in a 'waiting' state as per the model definition. This is achieved by the Intermediate Message event. Ideally, the confirmation message should be triggered by the procurement system, but for experiencing the workflow, you can manually trigger the same from a REST client (ex: Postman). To trigger the confirmation message, you need to:
 1. Get an XSRF Token.
@@ -148,10 +148,10 @@ Refer to the [API documentation](https://help.sap.com/doc/72317aec52144df8bc0479
 
 #### Accept Workplace - Task for Buddy
 Accept Workplace is the final task in the Onboarding extension process, where the buddy of the new hire will confirm that all the equipment requested are delivered and available.
-![Accept Workplace](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/acceptWorkplace.jpg?raw=true)
+![Accept Workplace](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/acceptWorkplace.jpg?raw=true)
 
 > Note: Once a workflow instance has been completed, they no more show in the Monitor Workflow Instances app by default. To view the completed workflow instances, modify the filter criteria to show instances with Status as Completed.
-> ![Completed Instances](https://github.com/SAP/cloud-workflow-sfsf-ext/blob/master/onboarding/images/completedInstances.jpg?raw=true)
+> ![Completed Instances](https://github.com/SAP/cloud-workflow-samples/blob/master/onboarding-sample/images/completedInstances.jpg?raw=true)
 
 ## Known Issues
 No known issues.
