@@ -38,4 +38,4 @@ No known issues.
 The project is provided "as-is", with no expected changes or support.
 
 ## License
-Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP Sample Code License Agreement(LICENSE).
+Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the [SAP Sample Code License Agreement](LICENSE).
