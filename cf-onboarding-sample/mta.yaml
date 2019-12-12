@@ -1,0 +1,55 @@
+ID: sample.onboarding.mta
+_schema-version: '2.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: uiDeployer
+    type: com.sap.html5.application-content
+    path: uiDeployer
+    requires:
+      - name: sample_onboarding_html5_repo_host
+    build-parameters:
+      requires:
+        - name: acceptworkplace
+          artifacts:
+            - './*'
+          target-path: resources/acceptworkplace
+        - name: approveequip
+          artifacts:
+            - './*'
+          target-path: resources/approveequip
+        - name: confirmequip
+          artifacts:
+            - './*'
+          target-path: resources/confirmequip
+  - name: onboarding
+    type: com.sap.application.content
+    path: onboarding
+    requires:
+      - name: workflow
+        parameters:
+          content-target: true
+  - name: acceptworkplace
+    type: html5
+    path: acceptWorkplace
+    build-parameters:
+      builder: grunt
+  - name: approveequip
+    type: html5
+    path: approveEquip
+    build-parameters:
+      builder: grunt
+  - name: confirmequip
+    type: html5
+    path: confirmEquip
+    build-parameters:
+      builder: grunt
+resources:
+  - name: sample_onboarding_html5_repo_host
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: workflow
+    type: org.cloudfoundry.existing-service

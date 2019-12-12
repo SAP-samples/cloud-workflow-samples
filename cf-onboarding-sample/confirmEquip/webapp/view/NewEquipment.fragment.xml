@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>addEquipment}">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:Form id="FormChange354" editable="true">
+					<f:title>
+						<core:Title text="Equipment Details"/>
+					</f:title>
+					<f:layout>
+						<f:ResponsiveGridLayout/>
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer>
+							<f:formElements>
+								<f:FormElement label="{i18n>equipType}">
+									<f:fields>
+										<Select forceSelection="true" selectedKey="{/products/equipmentTypes/0/id/}"
+											items="{path: '/products/equipmentTypes', sorter: { path: 'id'}}" change="onTypeSelChange">
+											<core:Item key="{id}" text="{text}"/>
+										</Select>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>equip}">
+									<f:fields>
+										<Select forceSelection="true" selectedKey="{/products/equipmentForType/0/id/}"
+											items="{path: '/products/equipmentForType', sorter: { path: 'id'}}" change="onEquipSelChange">
+											<core:Item key="{id}" text="{text}"/>
+										</Select>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>equipReqLoc}">
+									<f:fields>
+										<Select forceSelection="true" selectedKey="{/products/deliveryLocations/0/id/}"
+											items="{path: '/products/deliveryLocations', sorter: { path: 'id'}}" change="onLocSelChange">
+											<core:Item key="{id}" text="{text}"/>
+										</Select>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+					</f:formContainers>
+				</f:Form>
+			</VBox>
+		</content>
+		<beginButton>
+			<Button text="{i18n>save}" press="onSaveEquipment" enabled="true"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>cancel}" press="onCancelEquipment"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

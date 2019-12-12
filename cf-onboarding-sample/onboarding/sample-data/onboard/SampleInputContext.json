@@ -1,0 +1,73 @@
+{
+	"managerId": "<your trial email id>",
+	"buddyId": "<your trial email id>",
+	"userId": "cgrant1",
+	"empData": {
+		"d": {
+			"results": [{
+				"zipCode": "94404",
+				"lastName": "Grant",
+				"country": "United States",
+				"hireDate": "/Date(978307200000)/",
+				"reloLocation": null,
+				"city": "San Mateo",
+				"jobTitle": "General Manager, Industries",
+				"jobCode": "Vice President, Sales (VP-SALES)",
+				"title": "VP, Sales",
+				"userId": "cgrant1",
+				"division": "Industries (IND)",
+				"defaultFullName": "Carla Grant",
+				"firstName": "Carla",
+				"empInfo": {
+					"__metadata": {
+						"type": "SFOData.EmpEmployment"
+					},
+					"jobInfoNav": {
+						"results": [{
+							"isFulltimeEmployee": true,
+							"businessUnit": "ACE_IND",
+							"costCenter": "30001",
+							"jobTitle": "VP, Sales",
+							"countryOfCompany": "USA",
+							"jobCode": "VP-SALES",
+							"managerId": "athompson1",
+							"division": "IND",
+							"company": "ACE_USA",
+							"position": "VP_SALES",
+							"department": "SALES",
+							"startDate": "/Date(1343606400000)/"
+						}]
+					}
+				},
+				"reloWilling": null,
+				"addressLine1": "1500 Fashion Island Blvd",
+				"location": "San Mateo (US_SFO)",
+				"department": "Sales (SALES)",
+				"keyPosition": false
+			}]
+		},
+		"team": {
+			"d": {
+				"directReports": {
+					"results": [{
+						"__metadata": {
+							"type": "SFOData.User"
+						},
+						"userId": "dsharp1"
+					}, {
+						"__metadata": {
+							"type": "SFOData.User"
+						},
+						"userId": "cgrant1"
+					}, {
+						"__metadata": {
+							"type": "SFOData.User"
+						},
+						"userId": "sthomas1"
+					}]
+				}
+			}
+		},
+		"buddies": "dsharp1,cgrant1,sthomas1"
+	}
+}

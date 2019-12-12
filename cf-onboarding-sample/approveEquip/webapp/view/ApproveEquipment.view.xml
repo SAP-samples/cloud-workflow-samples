@@ -1,0 +1,129 @@
+<mvc:View controllerName="com.sap.cloud.workflow.samples.onboardapprove.controller.ApproveEquipment"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+	<App height="90%">
+		<pages>
+			<Page title="{i18n>title}" showHeader="false" showFooter="false">
+				<content>
+					<l:VerticalLayout width="100%" id="__layout0">
+						<l:content>
+							<ObjectHeader title="{/task/Title}" titleActive="false" id="__header0">
+								<attributes>
+									<ObjectAttribute title="{i18n>createdOn}" text="{/task/CreatedOn}"/>
+									<ObjectAttribute title="{i18n>description}" text="{/task/Description}"/>
+								</attributes>
+								<statuses>
+									<ObjectStatus text="{/task/Status}" state="None"/>
+									<ObjectStatus text="{/task/Priority}" state="{/task/PriorityState}"/>
+								</statuses>
+							</ObjectHeader>
+							<l:HorizontalLayout id="__layout1">
+								<l:content>
+									<IconTabBar selectedKey="__filter0" id="__bar0">
+										<items>
+											<IconTabFilter icon="sap-icon://hint" id="__filter0">
+												<content>
+													<l:HorizontalLayout id="hLayout11">
+														<FlexBox width="100%" id="__box0">
+															<items>
+																<l:VerticalLayout id="hLayout12">
+																	<HBox width="100%" id="__hbox0">
+																		<l:HorizontalLayout id="hLayoutJob1">
+																			<f:Form >
+																				<f:layout>
+																					<f:GridLayout singleColumn="true"/>
+																				</f:layout>
+																				<f:FormContainer expanded="true" title="{i18n>persInfo}" expandable="false">
+																					<f:formElements>
+																						<f:FormElement label="{i18n>empID}">
+																							<Text text="{/empData/d/results/0/userId}"/>
+																						</f:FormElement>
+																						<f:FormElement label="{i18n>firstName}">
+																							<Text text="{/empData/d/results/0/firstName}"/>
+																						</f:FormElement>
+																						<f:FormElement label="{i18n>lastName}">
+																							<Text text="{/empData/d/results/0/lastName}"/>
+																						</f:FormElement>
+																					</f:formElements>
+																				</f:FormContainer>
+																			</f:Form>
+																		</l:HorizontalLayout>
+																		<VBox id="VBoxJob1">
+																			<l:HorizontalLayout id="hLayoutJob2">
+																				<f:Form >
+																					<f:layout>
+																						<f:GridLayout singleColumn="true"/>
+																					</f:layout>
+																					<f:FormContainer expanded="true" title="{i18n>unitInfo}" expandable="false">
+																						<f:formElements>
+																							<f:FormElement label="{i18n>costCenter}">
+																								<Text text="{/empData/d/results/0/empInfo/jobInfoNav/results/0/costCenter}"/>
+																							</f:FormElement>
+																							<f:FormElement label="{i18n>department}">
+																								<Text text="{/empData/d/results/0/department}"/>
+																							</f:FormElement>
+																							<f:FormElement label="{i18n>businessUnit}">
+																								<Text text="{/empData/d/results/0/empInfo/jobInfoNav/results/0/businessUnit}"/>
+																							</f:FormElement>
+																						</f:formElements>
+																					</f:FormContainer>
+																				</f:Form>
+																			</l:HorizontalLayout>
+																		</VBox>
+																	</HBox>
+																	<Table id="idEquipTable" inset="false" mode="None" delete="deleteRow" noDataText="{i18n>noDataText}"
+																		items="{path:'/equipment/EquipmentsInfo', sorter : { path: 'Price'}}">
+																		<headerToolbar>
+																			<Toolbar>
+																				<Title text="{i18n>tableTitle}" level="H3"/>
+																				<ToolbarSpacer></ToolbarSpacer>
+																			</Toolbar>
+																		</headerToolbar>
+																		<columns>
+																			<Column width="12em">
+																				<Text text="{i18n>equipType}"/>
+																			</Column>
+																			<Column width="20em" demandPopin="true">
+																				<Text text="{i18n>equipDesc}"/>
+																			</Column>
+																			<Column minScreenWidth="Tablet" demandPopin="true">
+																				<Text text="{i18n>equipReqLoc}"/>
+																			</Column>
+																			<Column hAlign="Right">
+																				<Text text="{i18n>equipPrice}"/>
+																			</Column>
+																			<Column>
+																				<Text text="{i18n>status}"/>
+																			</Column>
+																		</columns>
+																		<items>
+																			<ColumnListItem>
+																				<cells>
+																					<Text text="{EquipmentType}"/>
+																					<ObjectIdentifier title="{ProdDesc}"/>
+																					<Text text="{RequestedLoc}"/>
+																					<ObjectNumber number="{ parts:[{path:'Price'},{path:'Currency'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false}}"
+																						unit="{Currency}"/>
+																					<Text text="{i18n>statusValue}" class="boldText"/>
+																				</cells>
+																			</ColumnListItem>
+																		</items>
+																	</Table>
+																</l:VerticalLayout>
+															</items>
+														</FlexBox>
+													</l:HorizontalLayout>
+												</content>
+											</IconTabFilter>
+											<IconTabFilter icon="sap-icon://employee-lookup" id="__filter1" visible="false"></IconTabFilter>
+										</items>
+									</IconTabBar>
+								</l:content>
+							</l:HorizontalLayout>
+						</l:content>
+					</l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

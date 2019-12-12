@@ -1,0 +1,213 @@
+{
+	"equipmentTypes": [{
+		"id": 1,
+		"text": "Notebook"
+	}, {
+		"id": 2,
+		"text": "Smartphone"
+	}, {
+		"id": 3,
+		"text": "Cables and Accessories"
+	}, {
+		"id": 4,
+		"text": "Monitor"
+	}, {
+		"id": 5,
+		"text": "Audio and Video"
+	}, {
+		"id": 6,
+		"text": "Others"
+	}],
+
+	"equipmentForType": [{
+		"id": 1,
+		"text": "Notebook Basic 15"
+	}, {
+		"id": 2,
+		"text": "Notebook Professional 17"
+	}, {
+		"id": 3,
+		"text": "Astro Laptop 1516"
+	}],
+
+	"equipmentForTypeNot": [{
+		"id": 1,
+		"text": "Notebook Basic 15"
+	}, {
+		"id": 2,
+		"text": "Notebook Professional 17"
+	}, {
+		"id": 3,
+		"text": "Astro Laptop 1516"
+	}],
+
+	"equipmentForTypeMob": [{
+		"id": 1,
+		"text": "Astro Phone 6"
+	}, {
+		"id": 2,
+		"text": "Cerdik Phone 7"
+	}, {
+		"id": 3,
+		"text": "Smartphone Alpha"
+	}, {
+		"id": 4,
+		"text": "Smartphone Beta"
+	}],
+
+	"equipmentForTypeAaV": [{
+		"id": 1,
+		"text": "Lovely Sound 5.1 Wireless"
+	}, {
+		"id": 2,
+		"text": "Lovely Sound 5.1"
+	}],
+
+	"equipmentForTypeCbl": [{
+		"id": 1,
+		"text": "Audio/Video Cable Kit - 4m"
+	}, {
+		"id": 2,
+		"text": "Notebook Lock"
+	}, {
+		"id": 3,
+		"text": "Travel Adapter"
+	}],
+
+	"equipmentForTypeMon": [{
+		"id": 1,
+		"text": "Ergo Screen E-I"
+	}, {
+		"id": 2,
+		"text": "Flat XL"
+	}],
+
+	"equipmentForTypeOth": [{
+		"id": 1,
+		"text": "Fabric bag professional"
+	}],
+
+	"deliveryLocations": [{
+		"id": 1,
+		"text": "Building 01"
+	}, {
+		"id": 2,
+		"text": "Building 02"
+	}, {
+		"id": 3,
+		"text": "Building 03"
+	}, {
+		"id": 4,
+		"text": "Building 04"
+	}, {
+		"id": 5,
+		"text": "Building 05"
+	}],
+
+	"equipmentList": [{
+		"EquipmentType": "Notebook",
+		"ProdDesc": "Notebook Basic 15",
+		"ProductID": "HT-1000",
+		"Price": "956",
+		"Currency": "EUR",
+		"TurnAroundDays": "20"
+	}, {
+		"EquipmentType": "Notebook",
+		"ProdDesc": "Notebook Professional 17",
+		"ProductID": "HT-1010",
+		"Price": "1999",
+		"Currency": "EUR",
+		"TurnAroundDays": "20"
+	}, {
+		"EquipmentType": "Notebook",
+		"ProdDesc": "Astro Laptop 1516",
+		"ProductID": "HT-1251",
+		"Price": "989",
+		"Currency": "EUR",
+		"TurnAroundDays": "20"
+	}, {
+		"EquipmentType": "Smartphone",
+		"ProdDesc": "Astro Phone 6",
+		"ProductID": "HT-1252",
+		"Price": "649",
+		"Currency": "EUR",
+		"TurnAroundDays": "15"
+	}, {
+		"EquipmentType": "Smartphone",
+		"ProdDesc": "Cerdik Phone 7",
+		"ProductID": "HT-1256",
+		"Price": "361.18",
+		"Currency": "EUR",
+		"TurnAroundDays": "15"
+	}, {
+		"EquipmentType": "Smartphone",
+		"ProdDesc": "Smartphone Alpha",
+		"ProductID": "HT-9992",
+		"Price": "599",
+		"Currency": "EUR",
+		"TurnAroundDays": "15"
+	}, {
+		"EquipmentType": "Smartphone",
+		"ProdDesc": "Smartphone Beta",
+		"ProductID": "HT-9998",
+		"Price": "699",
+		"Currency": "EUR",
+		"TurnAroundDays": "15"
+	}, {
+		"EquipmentType": "Audio and Video",
+		"ProdDesc": "Lovely Sound 5.1 Wireless",
+		"ProductID": "HT-1095",
+		"Price": "69",
+		"Currency": "EUR",
+		"TurnAroundDays": "3"
+	}, {
+		"EquipmentType": "Audio and Video",
+		"ProdDesc": "Lovely Sound 5.1",
+		"ProductID": "HT-1096",
+		"Price": "35.92",
+		"Currency": "EUR",
+		"TurnAroundDays": "3"
+	}, {
+		"EquipmentType": "Others",
+		"ProdDesc": "Fabric bag professional",
+		"ProductID": "HT-1114",
+		"Price": "139",
+		"Currency": "EUR",
+		"TurnAroundDays": "2"
+	}, {
+		"EquipmentType": "Monitor",
+		"ProdDesc": "Ergo Screen E-I",
+		"ProductID": "HT-1030",
+		"Price": "230",
+		"Currency": "EUR",
+		"TurnAroundDays": "15"
+	}, {
+		"EquipmentType": "Monitor",
+		"ProdDesc": "Flat XL",
+		"ProductID": "HT-1037",
+		"Price": "133.99",
+		"Currency": "EUR",
+		"TurnAroundDays": "15"
+	}, {
+		"EquipmentType": "Cables and Accessories",
+		"ProdDesc": "Audio/Video Cable Kit - 4m",
+		"ProductID": "HT-2026",
+		"Price": "31.90",
+		"Currency": "EUR",
+		"TurnAroundDays": "5"
+	}, {
+		"EquipmentType": "Cables and Accessories",
+		"ProdDesc": "Notebook Lock",
+		"ProductID": "HT-1111",
+		"Price": "6.90",
+		"Currency": "EUR",
+		"TurnAroundDays": "5"
+	}, {
+		"EquipmentType": "Cables and Accessories",
+		"ProdDesc": "Travel Adapter",
+		"ProductID": "HT-1119",
+		"Price": "84.04",
+		"Currency": "EUR",
+		"TurnAroundDays": "5"
+	}]
+}
