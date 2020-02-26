@@ -36,7 +36,4 @@ resources:
       service: html5-apps-repo
     type: org.cloudfoundry.managed-service
   - name: AIF_Alert_Management
-    parameters:
-      service-plan: lite
-      service: workflow
     type: org.cloudfoundry.existing-service
