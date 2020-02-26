@@ -1,0 +1,50 @@
+ID: WorkflowLaunchpad
+_schema-version: '2.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: WorkflowLaunchpad_appRouter
+    type: approuter.nodejs
+    path: WorkflowLaunchpad_appRouter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: WorkflowLaunchpad_html5_repo_runtime
+      - name: portal_resources_WorkflowLaunchpad
+      - name: AIF_Alert_Management
+      - name: uaa_WorkflowLaunchpad
+  - name: LaunchpadModule
+    type: com.sap.portal.content
+    path: LaunchpadModule
+    parameters:
+      stack: cflinuxfs3
+      memory: 128M
+      buildpack: 'https://github.com/cloudfoundry/nodejs-buildpack/releases/download/v1.6.39/nodejs-buildpack-cflinuxfs3-v1.6.39.zip'
+    requires:
+      - name: portal_resources_WorkflowLaunchpad
+      - name: AIF_Alert_Management
+      - name: uaa_WorkflowLaunchpad
+resources:
+  - name: WorkflowLaunchpad_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: portal_resources_WorkflowLaunchpad
+    parameters:
+      service-plan: standard
+      service: portal
+    type: org.cloudfoundry.managed-service
+  - name: AIF_Alert_Management
+    parameters:
+      service-plan: lite
+      service: workflow
+    type: org.cloudfoundry.existing-service
+  - name: uaa_WorkflowLaunchpad
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
