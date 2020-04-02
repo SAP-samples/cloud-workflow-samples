@@ -1,0 +1,50 @@
+def range(length, list)
+    if (size($list) < $length)
+        range($length, $list + [size($list)])
+    else
+        $list
+
+def zip(arr1, arr2)[
+    for (range(size($arr1), []))[$arr1[.], $arr2[.]]]
+
+def path(root, segments, fallback)
+    if (size($segments) == 1)
+        get-key($root, $segments[0], $fallback)
+    else
+        path(get-key($root, $segments[0], $fallback), $segments[1 : ], $fallback)   
+
+def resolve(root, path)
+    let clean_path = replace(replace($path, "^\\$\\{context", "data"), "\\}$", "")
+    let segments = split($clean_path, "\\.")
+    let result = path($root, $segments, "<invalid path: " + $path + ">")
+    $result
+
+let root = .
+
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "originator": .originator,
+    "body": flatten(zip([
+            for (.content) {
+                "type": "TextBlock",
+                "text": .label,
+                "wrap": true
+        }], [
+            for (.content) {
+                "type": "Input.Text",
+                "id": .id,
+                "placeholder": .placeholder,
+                "value": resolve($root, .value)
+        }])),
+    "actions": [
+        for (.decisions) {
+            "type": "Action.Http",
+            "title": .text,
+            "method": "POST",
+            "url": $root.cardSubmissionUrl + "/action/" + .id,
+            "body": .id
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+---
+applications:
+- name: <your-trial-global-account>-<your-cf-space-name>-wfs-forms-adaptive-cards
+  memory: 1G
+  instances: 1
+  path: target/wfs-forms-adaptive-cards-0.0.1-SNAPSHOT.war
+  buildpack: sap_java_buildpack
+  env:
+    TARGET_RUNTIME: tomcat
+    SET_LOGGING_LEVEL: '{com.sap.bpm.wfs: INFO}'
+    LOG_REMOTE_USER: true
+    JAVA_OPTS: "-Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+        -Dcom.sun.management.jmxremote.port=5000
+        -Dcom.sun.management.jmxremote.rmi.port=5000
+        -Djava.rmi.server.hostname='127.0.0.1' "
+  timeout: 600
+  services:
+    - workflow-service
+    - destination-service
