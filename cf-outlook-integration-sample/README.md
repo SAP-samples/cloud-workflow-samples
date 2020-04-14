@@ -11,7 +11,7 @@ This sample project contains a Java application explains to integrate SAP Cloud 
 ## Known Issues
 No known issues.
 
-## How to obtain support
+## How to Obtain Support
 The project is provided "as-is", with no expected changes or support.
 
 ## License
