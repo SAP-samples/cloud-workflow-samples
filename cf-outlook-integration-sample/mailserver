@@ -1,0 +1,6 @@
+#mail.password=<< Existing password/certificate removed on export >>
+#
+#Thu Apr 02 09:48:39 UTC 2020
+Name=mailserver
+Type=MAIL
+mail.user=my-email@server.com
