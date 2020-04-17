@@ -226,5 +226,5 @@ Change AIF message content, restart/cancel AIF message is not possible.
 The project is provided "as-is", with no expected changes or support.
 
 # License
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP SAMPLE CODE LICENSE AGREEMENT.  
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the [SAP SAMPLE CODE LICENSE AGREEMENT](https://github.wdf.sap.corp/OSPO/guidelines/blob/master/publishing/Apache2.0).  
 
