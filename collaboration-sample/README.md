@@ -106,4 +106,4 @@ The project is provided "as-is", with no expected changes or support.
 
 ## License
 Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the SAP SAMPLE CODE LICENSE AGREEMENT.
+This file is licensed under the [Apache License Version 2.0](https://github.wdf.sap.corp/OSPO/guidelines/blob/master/publishing/Apache2.0).
