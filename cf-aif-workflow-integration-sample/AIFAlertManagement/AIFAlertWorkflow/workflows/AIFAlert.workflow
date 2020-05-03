@@ -23,6 +23,9 @@
 				},
 				"71e633dc-5405-4a17-8c15-e8386c93547b": {
 					"name": "Modify Context"
+				},
+				"c6f73aef-8469-4be5-8b80-26d25b6b29f1": {
+					"name": "CallBack for Restart/Cancel action"
 				}
 			},
 			"sequenceFlows": {
@@ -37,6 +40,9 @@
 				},
 				"e127c82e-b6a1-4e93-a835-a503bde31ed9": {
 					"name": "SequenceFlow10"
+				},
+				"692c4c33-59fc-4547-b45e-2093055d98dc": {
+					"name": "SequenceFlow11"
 				}
 			},
 			"diagrams": {
@@ -78,6 +84,16 @@
 			"id": "ModifyContext",
 			"name": "Modify Context"
 		},
+		"c6f73aef-8469-4be5-8b80-26d25b6b29f1": {
+			"classDefinition": "com.sap.bpm.wfs.ServiceTask",
+			"destination": "YI3_000",
+			"path": "/sap/opu/odata/sap/SWF_CPWF_NOTIFICATION_SRV/ProcessCompleted?workflowInstanceId='${info.workflowInstanceId}'",
+			"httpMethod": "POST",
+			"xsrfPath": "/sap/opu/odata/sap/SWF_CPWF_NOTIFICATION_SRV/",
+			"requestVariable": "",
+			"id": "servicetask1",
+			"name": "CallBack for Restart/Cancel action"
+		},
 		"de3d2653-2efa-421b-9b23-8bda3b6a246b": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
 			"id": "sequenceflow7",
@@ -104,6 +120,13 @@
 			"id": "sequenceflow10",
 			"name": "SequenceFlow10",
 			"sourceRef": "0eae543c-b81e-48ab-97cd-a820e6bae79b",
+			"targetRef": "c6f73aef-8469-4be5-8b80-26d25b6b29f1"
+		},
+		"692c4c33-59fc-4547-b45e-2093055d98dc": {
+			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
+			"id": "sequenceflow11",
+			"name": "SequenceFlow11",
+			"sourceRef": "c6f73aef-8469-4be5-8b80-26d25b6b29f1",
 			"targetRef": "d0a34334-ce25-4cf6-acd8-46efc490ef31"
 		},
 		"647e024b-142a-4539-99a0-7d3f3bd9b9d5": {
@@ -117,7 +140,9 @@
 				"df0516f6-dfa2-417b-b8ed-65a6dc148636": {},
 				"0daac1c4-3711-4162-826b-80f6a35707be": {},
 				"73aa591b-2ab8-4aa0-b358-4dc67eed3069": {},
-				"3bddb2c7-efc7-476a-aec3-6607efc323c7": {}
+				"3bddb2c7-efc7-476a-aec3-6607efc323c7": {},
+				"2ce9c4b4-a334-454a-9ca3-c3f76c9da350": {},
+				"40899cfc-e3e5-429c-9d34-50f393db511a": {}
 			}
 		},
 		"40c188e2-9edb-48b2-a9f1-0f163414e3dc": {
@@ -130,8 +155,8 @@
 		},
 		"1d65d771-3eee-47fd-abc4-454a0615af41": {
 			"classDefinition": "com.sap.bpm.wfs.ui.EndEventSymbol",
-			"x": 544,
-			"y": 24.5,
+			"x": 707,
+			"y": 25.5,
 			"width": 35,
 			"height": 35,
 			"object": "d0a34334-ce25-4cf6-acd8-46efc490ef31"
@@ -183,19 +208,35 @@
 		},
 		"3bddb2c7-efc7-476a-aec3-6607efc323c7": {
 			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "494,42 544,42",
+			"points": "444,42 592,42",
 			"sourceSymbol": "003d8ee4-3cc2-4bd5-bdea-af2b9d94f050",
-			"targetSymbol": "1d65d771-3eee-47fd-abc4-454a0615af41",
+			"targetSymbol": "2ce9c4b4-a334-454a-9ca3-c3f76c9da350",
 			"object": "e127c82e-b6a1-4e93-a835-a503bde31ed9"
+		},
+		"2ce9c4b4-a334-454a-9ca3-c3f76c9da350": {
+			"classDefinition": "com.sap.bpm.wfs.ui.ServiceTaskSymbol",
+			"x": 542,
+			"y": 12,
+			"width": 100,
+			"height": 60,
+			"object": "c6f73aef-8469-4be5-8b80-26d25b6b29f1"
+		},
+		"40899cfc-e3e5-429c-9d34-50f393db511a": {
+			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
+			"points": "592,42.5 724.5,42.5",
+			"sourceSymbol": "2ce9c4b4-a334-454a-9ca3-c3f76c9da350",
+			"targetSymbol": "1d65d771-3eee-47fd-abc4-454a0615af41",
+			"object": "692c4c33-59fc-4547-b45e-2093055d98dc"
 		},
 		"e0a7f884-9d2b-4ea5-83ad-eb14a4fc38f2": {
 			"classDefinition": "com.sap.bpm.wfs.LastIDs",
 			"timereventdefinition": 1,
 			"maildefinition": 1,
-			"sequenceflow": 10,
+			"sequenceflow": 11,
 			"startevent": 1,
 			"endevent": 1,
 			"usertask": 1,
+			"servicetask": 1,
 			"scripttask": 1,
 			"mailtask": 1
 		},
@@ -207,8 +248,8 @@
 		"a02af959-b081-4213-b684-5e2393390eed": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition1",
-			"to": "youruser@sampledomain.com",
-			"subject": "AIF SCP CF Workflow Triggered",
+			"to": "your EMail address here for testing",
+			"subject": "AIF Restart Cancel Workflow Triggered for testing",
 			"text": "AIF Message Keys:\nNamespace: ${context.alertData.ns}\nInterface: ${context.alertData.ifname} \nVersion  : ${context.alertData.ifversion}\nMSGGUID  : ${context.alertData.msgguid}\nIBN URL  : ${context.alertData.ibn}\n\nAIF Error Logs:\n${context.alertData.logMessages[0].message}\n${context.alertData.logMessages[1].message}\n${context.alertData.logMessages[2].message}\n${context.alertData.logMessages[3].message}\n${context.alertData.logMessages[4].message}\n${context.alertData.logMessages[5].message}\n${context.alertData.logMessages[6].message}\n${context.alertData.logMessages[7].message}\n${context.alertData.logMessages[8].message}\n${context.alertData.logMessages[9].message}\n",
 			"id": "maildefinition1"
 		}
