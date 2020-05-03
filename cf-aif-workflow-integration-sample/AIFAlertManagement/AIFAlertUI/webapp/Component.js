@@ -43,13 +43,13 @@ sap.ui.define([
 				action: "Restart",
 				label: "Restart"
 			}, function (button) {
-				this._completeTask(taskId, false);
+				this._completeTask(taskId, 'R');
 			}, this);
 			startupParameters.inboxAPI.addAction({
 				action: "Cancel",
 				label: "Cancel"
 			}, function (button) {
-				this._completeTask(taskId, true);
+				this._completeTask(taskId,  "C");
 			}, this);
 
 		},
@@ -60,7 +60,7 @@ sap.ui.define([
 				method: "PATCH",
 				contentType: "application/json",
 				async: false,
-				data: "{\"status\": \"COMPLETED\", \"context\": {\"approved\":\"" + approvalStatus + "\"}}",
+				data: "{\"status\": \"COMPLETED\", \"context\": {\"aifAction\":\"" + approvalStatus + "\"}}",
 				headers: {
 					"X-CSRF-Token": token
 				}
