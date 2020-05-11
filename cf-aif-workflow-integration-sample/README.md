@@ -10,7 +10,7 @@ This AIF SCP Workflow Integration sample project contains a workflow application
 # Scenario
 While message processing in S/4 HANA error occurs in the AIF, the AIF creates an alert to inform the business user.   
 While this alert, also a workflow instance in SCP Workflow service can be created and assigned to specific user of a group.   
-Within the processing in SCP Workflow service, the users are able to see the error logs of the AIF message, and restart or cancel the AIF message from workflow.  
+Within the processing in SCP Workflow service, the users are able to see the error logs Withof the AIF message, and restart or cancel the AIF message from workflow.  
 
 # Requirements
 SAP Cloud Platform Tenant - If you do not have one, then you could get your hands on to a [free trial account](http://cloudplatform.sap.com/try.html).  
@@ -151,9 +151,9 @@ Note this URL.
 ### Download and Deploy Workflow AIFAlertManagement
 Download or clone the following content from Git repository:  
 
-	aif-scp-workflow-integration-sample --> AIFAlertManagement_WithRestartCancel.zip
+	aif-scp-workflow-integration-sample --> AIFAlertManagement_WithRestartandCancel.zip
 
-[Refer to help document](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/51321a804b1a4935b0ab7255447f5f84.html), login to SAP WebIDE Full-Stack and import the "AIFAlertManagement.zip" into the workspace.  
+[Refer to help document](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/51321a804b1a4935b0ab7255447f5f84.html), login to SAP WebIDE Full-Stack and import the "AIFAlertManagement_WithRestartandCancel.zip" into the workspace.  
 Once the import is successful, expand the “AIFAlertWorkflow” folder, expand the “workflows” subfolder, double click the file “AIFAlert.workflow”.   
 The workflow definition should be open in the right editor.  
 Select the “Send Error Mail” mail task, in the right properties section, switch to “Details” tab, change the “To” field with the email addresses which should receive the alert email for workflow instance, save your change.  
