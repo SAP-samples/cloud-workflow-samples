@@ -35,16 +35,22 @@ modules:
     path: acceptWorkplace
     build-parameters:
       builder: grunt
+      supported-platforms: []
+      build-result: dist
   - name: approveequip
     type: html5
     path: approveEquip
     build-parameters:
       builder: grunt
+      supported-platforms: []
+      build-result: dist
   - name: confirmequip
     type: html5
     path: confirmEquip
     build-parameters:
       builder: grunt
+      supported-platforms: []
+      build-result: dist
 resources:
   - name: sample_onboarding_html5_repo_host
     parameters:
