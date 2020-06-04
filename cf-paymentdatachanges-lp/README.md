@@ -16,7 +16,7 @@ Additionally, the Custom Core Data Services Views to retrieve Country and Bank i
 
 
 
-## Steps to set up the Fiori Launchpad with My Inbox
+## Steps to set up the Fiori Launchpad with My Inbox application
 
 In order to render the Custom Task UIs used in the Payment Data Changes process, the Fiori Launchpad needs to have a binding with the following service instances
 
@@ -33,7 +33,7 @@ In order to render the Custom Task UIs used in the Payment Data Changes process,
 
 Build the mta and deploy it to your tenant.
 
-## Steps to set up the Custom Task UIs for 
+## Steps to set up the Custom Task UIs for Business Partner Payment Data Change Approval Process
 
 The custom task UIs used in the process steps of Business Partner Payment Data Change Approval Process make use of the rich capabilities of SAP UI5. 
 
