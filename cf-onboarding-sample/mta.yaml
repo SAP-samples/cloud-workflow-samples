@@ -27,7 +27,7 @@ modules:
     type: com.sap.application.content
     path: onboarding
     requires:
-      - name: workflow
+      - name: defaut_workflow
         parameters:
           content-target: true
   - name: acceptworkplace
@@ -57,5 +57,5 @@ resources:
       service-plan: app-host
       service: html5-apps-repo
     type: org.cloudfoundry.managed-service
-  - name: workflow
+  - name: defaut_workflow
     type: org.cloudfoundry.existing-service
