@@ -1,0 +1,16 @@
+{
+	"engines": {
+		"node": ">=8.0.0"
+	},
+	"name": "site-content",
+	"version": "3.17.0",
+	"description": "portal site content deployer package",
+	"license": "Apache-2.0",
+	"author": "Portal Team",
+	"dependencies": {
+		"@sap/portal-cf-content-deployer": "3.18.0-20190911111653"
+	},
+	"scripts": {
+		"start": "node --harmony node_modules/@sap/portal-cf-content-deployer/src/index.js"
+	}
+}

@@ -1,0 +1,130 @@
+{
+	"_version": "3.0.0",
+	"identification": {
+		"id": "27264e09-90a0-48ac-831f-f1578ca0407f-1568968840761",
+		"entityType": "bundle"
+	},
+	"payload": {
+		"catalogs": [{
+			"_version": "3.0.0",
+			"identification": {
+				"id": "defaultCatalogId",
+				"title": "{{title}}",
+				"entityType": "catalog",
+				"i18n": "i18n/defaultCatalogId.properties"
+			},
+			"payload": {
+				"viz": [{
+					"id": "sap.pv.instances",
+					"vizId": "pv-showInstances"
+				}, {
+					"id": "sap.pv.ovp",
+					"vizId": "pv-showScenarioOverview"
+				}]
+			}
+		}],
+		"groups": [{
+			"_version": "3.0.0",
+			"identification": {
+				"id": "business-rules",
+				"title": "Business Rules",
+				"entityType": "group"
+			},
+			"payload": {
+				"viz": [{
+					"id": "sap.rule.manageprojects-0-1589952114451",
+					"appId": "sap.rule.manageprojects",
+					"vizId": "BusinessRules-ManageRulesProjects"
+				}]
+			}
+		}, {
+			"_version": "3.0.0",
+			"identification": {
+				"id": "workflow",
+				"title": "{{title}}",
+				"entityType": "group",
+				"i18n": "i18n/workflow.properties"
+			},
+			"payload": {
+				"viz": [{
+					"id": "cross.fnd.fiori.inbox-0-1568986171400",
+					"appId": "cross.fnd.fiori.inbox",
+					"vizId": "WorkflowTask-DisplayMyInbox"
+				}, {
+					"id": "com.sap.bpm.monitorworkflow-1-1568986171400",
+					"appId": "com.sap.bpm.monitorworkflow",
+					"vizId": "bpmworkflowmonitor-DisplayDefinitions"
+				}, {
+					"id": "com.sap.bpm.monitorworkflow-2-1568986171400",
+					"appId": "com.sap.bpm.monitorworkflow",
+					"vizId": "bpmworkflowmonitor-DisplayInstances"
+				}]
+			}
+		}, {
+			"_version": "3.0.0",
+			"identification": {
+				"id": "processvisibility",
+				"title": "{{title}}",
+				"entityType": "group",
+				"i18n": "i18n/processvisibility.properties"
+			},
+			"payload": {
+				"viz": [{
+					"id": "sap.pv.configurescenarios-0-1568986171400",
+					"appId": "sap.pv.configurescenarios",
+					"vizId": "pv-configurescenarios"
+				}, {
+					"id": "sap.pv.monitorscenarios-1-1568986171400",
+					"appId": "sap.pv.monitorscenarios",
+					"vizId": "pv-monitorscenarios"
+				}, {
+					"id": "sap.pv.eventacquisition-2-1568986171400",
+					"appId": "sap.pv.eventacquisition",
+					"vizId": "pv-eventacquisition"
+				}, {
+					"id": "sap.pv.processworkspace-3-1568986171400",
+					"appId": "sap.pv.processworkspace",
+					"vizId": "pv-processworkspace"
+				}]
+			}
+		}],
+		"sites": [{
+			"_version": "3.0.0",
+			"identification": {
+				"id": "65af0ce1-4cd7-4963-8688-db605e5d114e-1568968840761",
+				"entityType": "site",
+				"title": "SAP Fiori launchpad site on Cloud Foundry",
+				"description": "SAP Fiori launchpad site on Cloud Foundry, deployed from SAP Web IDE"
+			},
+			"payload": {
+				"config": {
+					"ushellConfig": {
+						"renderers": {
+							"fiori2": {
+								"componentData": {
+									"config": {
+										"applications": {
+											"Shell-home": {}
+										},
+										"enableSearch": false,
+										"enablePersonalization": true,
+										"enableSetTheme": true,
+										"enableSetLanguage": true
+									}
+								}
+							}
+						}
+					}
+				},
+				"groupsOrder": ["business-rules", "workflow", "processvisibility"],
+				"sap.cloud.portal": {
+					"config": {
+						"theme.id": "sap_fiori_3",
+						"theme.active": ["sap_fiori_3", "sap_belize_hcb", "sap_belize_hcw"],
+						"ui5VersionNumber": "1.76.0"
+					}
+				}
+			}
+		}]
+	}
+}

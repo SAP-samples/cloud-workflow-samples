@@ -1,0 +1,30 @@
+{
+	"_version": "3.0",
+	"identification": {
+		"id": "sap.rule.manageprojects",
+		"entityType": "businessapp"
+	},
+	"payload": {
+		"visualizations": {
+			"BusinessRules-ManageRulesProjects": {
+				"vizType": "sap.ushell.StaticAppLauncher",
+				"vizConfig": {
+					"sap.app": {
+						"title": "Manage Rule Projects"
+					},
+					"sap.flp": {
+						"target": {
+							"type": "URL",
+							"url": "/comsapbpmrule.ruleeditor/"
+						}
+					},
+					"sap.ui": {
+						"icons": {
+							"icon": "sap-icon://suitcase"
+						}
+					}
+				}
+			}
+		}
+	}
+}

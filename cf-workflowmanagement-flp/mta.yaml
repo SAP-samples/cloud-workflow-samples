@@ -1,0 +1,64 @@
+ID: WorkflowManagementFLP
+_schema-version: '2.1'
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: WorkflowManagementFLP_appRouter
+    type: approuter.nodejs
+    path: WorkflowManagementFLP_appRouter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: WorkflowManagementFLP_html5_repo_runtime
+      - name: uaa_workflowmanagement
+      - name: default_workflow
+      - name: default_processvisibility
+      - name: default_portal
+      - name: default_business-rules
+  - name: WFMFLP
+    type: com.sap.portal.content
+    path: WFMFLP
+    parameters:
+      stack: cflinuxfs3
+      memory: 128M
+      buildpack: 'https://github.com/cloudfoundry/nodejs-buildpack/releases/download/v1.6.39/nodejs-buildpack-cflinuxfs3-v1.6.39.zip'
+    requires:
+      - name: uaa_workflowmanagement
+      - name: default_workflow
+      - name: default_processvisibility
+      - name: default_portal
+      - name: default_business-rules
+resources:
+  - name: WorkflowManagementFLP_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: uaa_workflowmanagement
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: default_portal
+    parameters:
+      service-plan: standard
+      service: portal
+    type: org.cloudfoundry.managed-service
+  - name: default_processvisibility
+    parameters:
+      service-plan: lite
+      service: processvisibility
+    type: org.cloudfoundry.managed-service
+  - name: default_workflow
+    parameters:
+      service-plan: lite
+      service: workflow
+    type: org.cloudfoundry.managed-service
+  - name: default_business-rules
+    parameters:
+      service-plan: lite
+      service: business-rules
+    type: org.cloudfoundry.managed-service
