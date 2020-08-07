@@ -12,8 +12,8 @@ To successfully deploy this FLP, you need an account in SAP Cloud Platform Cloud
 6. HTML5 Applications
 
 ### Deploy Fiori Launchpad Application
-1. Download the Multi-Target Application (MTA) project **WorkflowManagementFLP.zip** from the **resources** folder.
-2. Use *SAP WebIDE* or *SAP Business Application Studio* to build and deploy the MTA project into the SAP Cloud Platform account.
+1. Download the Multi-Target Application (MTA) project **WorkflowManagementFLP.tar.zip** from the **resources** folder and uncompress the file.
+2. Use *SAP WebIDE* or *SAP Business Application Studio* to import, build and deploy the MTA project into the SAP Cloud Platform account.
     - SAP Web IDE ([import archive](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/344e8c91e33b4ae8b4032709c45776a3.html) and then [build and deploy](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/1b0a7a0938944c7fac978d4b8e23a63f.html))
     - SAP Business Application Studio ([deploy a MTA project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/97ef204c568c4496917139cee61224a6.html))
 
