@@ -1,0 +1,21 @@
+{
+    "RequestId": "CAPEX_REQ_00_000",
+    "Title": "Build mobile apps",
+    "Requester": {
+        "Name":"John Dilbert",
+        "Email": "john.dilbert@saptest.com",
+        "UserId":"P000000",
+        "Comment":"Please approve the capital expenditure"
+    },
+    "Investment": {
+        "TotalCost": 10000,
+        "Type": "Software",
+        "CAPEX": 10000,
+        "OPEX": 4000,
+        "Division":"BPM",
+        "ROI": 5,
+        "Country": "Germany",
+        "Currency": "EUR",
+        "Description": "Provide a fresh experience for our customers by providing new apps for our services"
+    }
+}
