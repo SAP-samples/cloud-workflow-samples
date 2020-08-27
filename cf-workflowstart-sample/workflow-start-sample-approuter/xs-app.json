@@ -1,4 +1,5 @@
 {
     "authenticationMethod": "none",
-    "routes": [] 
+    "routes": [],
+    "welcomeFile": "/cp.portal"
 }
