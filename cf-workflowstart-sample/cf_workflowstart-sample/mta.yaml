@@ -1,0 +1,91 @@
+_schema-version: "3.2"
+ID: workflow-start-sample
+version: 0.0.1
+modules:
+- name: approvals
+  type: com.sap.application.content
+  path: approvals
+  requires:
+  - name: default_workflow
+    parameters:
+      content-target: true
+- name: workflow-start-sample-approuter
+  type: approuter.nodejs
+  path: workflow-start-sample-approuter
+  requires:
+  - name: workflow-start-sample_html_repo_runtime
+  - name: default_workflow
+  - name: uaa_workflowstartform
+  - name: default_portal
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+- name: workflow-start-sample_ui_deployer
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: workflow-start-sample_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - startworkflow-content.zip
+      name: startworkflow
+      target-path: resources/
+- name: startworkflow
+  type: html5
+  path: startworkflow
+  build-parameters:
+    builder: custom
+    commands:
+    - npm run build
+    supported-platforms: []
+- name: homepageflp
+  type: com.sap.application.content
+  path: homepageflp
+  requires:
+  - name: default_portal
+    parameters:
+      content-target: true
+      service-key:
+        config:
+          content-endpoint: developer
+        name: content-deploy-key
+  - name: workflow-start-sample_html_repo_host
+  - name: workflow-start-sample_ui_deployer
+  - name: uaa_workflowstartform
+  - name: default_workflow
+resources:
+- name: default_workflow
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service: workflow
+    service-plan: lite
+- name: workflow-start-sample_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: workflow-start-sample_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: uaa_workflowstartform
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-plan: application
+- name: default_portal
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: portal
+    service-plan: standard
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm install

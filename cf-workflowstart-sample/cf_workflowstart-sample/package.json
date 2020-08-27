@@ -1,0 +1,18 @@
+{
+  "name": "workflow-start-sample",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@sap/ui5-builder-webide-extension": "1.0.x",
+    "@ui5/cli": "2.2.6",
+    "eslint": "5.16.x",
+    "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
+    "@sapui5/ts-types": "1.71.x",
+    "bestzip": "2.1.4",
+    "rimraf": "3.0.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ui5-builder-webide-extension"
+    ]
+  }
+}
