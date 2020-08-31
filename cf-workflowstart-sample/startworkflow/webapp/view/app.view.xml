@@ -59,12 +59,12 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.la
                         </content>
                     </Panel>
                     </content>
-                    	<footer>
-					    <Toolbar id="actionsToolbar">
+                    <footer>
+                        <Toolbar id="actionsToolbar">
 						    <ToolbarSpacer/>
-						    <Button id="startworkflowbtn" text="Start Workflow" type="Accept" press="onStartPress"/>
-					</Toolbar>
-				</footer>
+						     <Button id="startworkflowbtn" text="Start Workflow" type="Accept" press="onStartPress"/>
+					    </Toolbar>
+				    </footer>
 				</Page>
 			</pages>
 		</App>

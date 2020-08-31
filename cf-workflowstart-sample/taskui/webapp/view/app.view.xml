@@ -1,0 +1,80 @@
+<mvc:View controllerName="sap.demo.bpm.taskui.controller.app" 
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:ux="sap.uxap" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+<App id="app" height="90%">
+    <pages>
+        <Page id="page" title="Capital Expenditure Request Approval">
+            <content>
+                <l:VerticalLayout width="100%" id="__layout0">
+                    <l:content>
+                        <ObjectHeader title="{/task/Title}" titleActive="false" id="__header0">
+                            <attributes>
+                                <ObjectAttribute title="{i18n>createdOn}" text="{/task/CreatedOn}"/>
+                                <ObjectAttribute title="{i18n>description}" text="{/task/Description}"/>
+                            </attributes>
+                            <statuses>
+                                <ObjectStatus text="{/task/Status}" state="None"/>
+                                <ObjectStatus text="{/task/Priority}" state="{/task/PriorityState}"/>
+                            </statuses>
+                        </ObjectHeader>
+                    
+                        <Panel class="sapUiResponsiveMargin" accessibleRole="Region">
+                            <headerToolbar>
+                                <OverflowToolbar>
+                                    <Title text="Requestor Details"/>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <content>
+                                <f:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout">
+                                    <Label text="Full Name"/>
+                                    <Input value="{/Requester/Name}"/>
+                                    <Label text="Email Address"/>
+                                    <Input value="{/Requester/Email}"/>
+                                    <Label text="User Id"/>
+                                    <Input value="{/Requester/UserId}"/>
+                                </f:SimpleForm>
+                            </content>
+                        </Panel>
+                    
+                        <Panel class="sapUiResponsiveMargin" accessibleRole="Region">
+                            <headerToolbar>
+                                <OverflowToolbar>
+                                    <Title text="Investment Details"/>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <content>
+                                <f:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout">
+                                        <Label text="Request Id"/>
+                                        <Input value="{/RequestId}"/>
+                                        <Label text="Title"/>
+                                        <Input value="{/Title}"/>
+                                        <Label text="Type"/>
+                                        <ComboBox>
+                                            <items>
+                                            <core:Item key="Software" text="Software" />
+                                            <core:Item key="Equipment" text="Equipment" />
+                                            <core:Item key="Service" text="Service" />
+                                            <core:Item key="Building" text="Building" />
+                                            </items>
+                                        </ComboBox>
+                                        <Label text="Country"/>
+                                        <Input value="{/Investment/Country}"/>
+                                        <Label text="Division"/>
+                                        <Input value="{/Investment/Division}"/>
+                                        <Label text="Description"/>
+                                        <Input value="{/Investment/Description}"/>
+                                        <Label text="CAPEX"/>
+                                        <Input value="{/Investment/CAPEX}"/>
+                                        <Label text="OPEX"/>
+                                        <Input value="{/Investment/OPEX}"/>
+                                        <Label text="Total Cost"/>
+                                        <Input value="{/Investment/TotalCost}"/>
+                                    </f:SimpleForm>
+                                </content>
+                        </Panel>
+                    </l:content>
+                </l:VerticalLayout>
+            </content>
+        </Page>
+    </pages>
+</App>
+</mvc:View>

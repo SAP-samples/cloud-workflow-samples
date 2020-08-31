@@ -32,6 +32,25 @@
 					"vizId": "capex-startworkflow"
 				}]
 			}
+		}, {
+			"_version": "3.0.0",
+			"identification": {
+				"id": "workflow",
+				"title": "{{title}}",
+				"entityType": "group",
+				"i18n": "i18n/workflow.properties"
+			},
+			"payload": {
+				"viz": [{
+					"id": "com.sap.bpm.monitorworkflow-0-1598725289531",
+					"appId": "com.sap.bpm.monitorworkflow",
+					"vizId": "bpmworkflowmonitor-DisplayInstances"
+				}, {
+					"id": "cross.fnd.fiori.inbox-1-1598725289531",
+					"appId": "cross.fnd.fiori.inbox",
+					"vizId": "WorkflowTask-DisplayMyInbox"
+				}]
+			}
 		}],
 		"sites": [{
 			"_version": "3.0.0",
@@ -57,7 +76,7 @@
 						}
 					}
 				},
-				"groupsOrder": ["defaultGroupId"],
+				"groupsOrder": ["defaultGroupId", "workflow"],
 				"sap.cloud.portal": {
 					"config": {
 						"theme.id": "sap_fiori_3",
