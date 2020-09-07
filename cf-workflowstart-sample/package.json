@@ -7,7 +7,7 @@
     "eslint": "5.16.x",
     "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
     "@sapui5/ts-types": "1.71.x",
-    "bestzip": "2.1.4",
+    "bestzip": "2.1.7",
     "rimraf": "3.0.2"
   },
   "ui5": {
