@@ -1,0 +1,17 @@
+_schema-version: "3.2"
+ID: SampleCapexApprovalProcess
+version: 0.0.1
+modules:
+  - name: CapEx
+    type: com.sap.application.content
+    path: CapEx
+    requires:
+      - name: wm_workflow
+        parameters:
+          content-target: true
+resources:
+  - name: wm_workflow
+    parameters:
+      service-plan: standard
+      service: workflow
+    type: org.cloudfoundry.existing-service
