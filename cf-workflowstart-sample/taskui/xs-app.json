@@ -1,22 +1,40 @@
 {
-  "welcomeFile": "/index.html",
-  "authenticationMethod": "route",
-  "logout": {
-    "logoutEndpoint": "/do/logout"
-  },
-  "routes": [
-      {
-        "source": "^/bpmworkflowruntime/(.*)$",
-        "target": "/$1",
-        "service": "com.sap.bpm.workflow",
-        "endpoint": "workflow_rest_url",
-        "authenticationType": "xsuaa"
-    }, 
-    {
-      "source": "^(.*)$",
-      "target": "$1",
-      "service": "html5-apps-repo-rt",
-      "authenticationType": "xsuaa"
-    }
-  ]
+    "welcomeFile": "/index.html",
+    "authenticationMethod": "route",
+    "logout": {
+        "logoutEndpoint": "/do/logout"
+    },
+    "routes": [
+        {
+            "source": "^/bpmworkflowruntime/(.*)$",
+            "target": "/$1",
+            "service": "com.sap.bpm.workflow",
+            "endpoint": "workflow_rest_url",
+            "authenticationType": "xsuaa"
+        },
+        {
+            "source": "^/S4HANA_Dest/(.*)$",
+            "target": "/$1",
+            "destination": "FUB_ODATA",
+            "authenticationType": "none"
+        },
+        {
+            "source": "^/SFSF_Dest/(.*)$",
+            "target": "/$1",
+            "destination": "SFSF_salesdemo2",
+            "authenticationType": "none"
+        },
+        {
+            "source": "^/NorthWind_Dest/(.*)$",
+            "target": "/$1",
+            "destination": "northwind",
+            "authenticationType": "none"
+        },
+        {
+            "source": "^(.*)$",
+            "target": "$1",
+            "service": "html5-apps-repo-rt",
+            "authenticationType": "xsuaa"
+        }
+    ]
 }
