@@ -17,6 +17,8 @@ modules:
   - name: default_workflow
   - name: uaa_workflowstartform
   - name: default_portal
+  - name: default_destination
+  - name: default_connectivity
   parameters:
     disk-quota: 256M
     memory: 256M
@@ -96,6 +98,16 @@ resources:
   parameters:
     service: portal
     service-plan: standard
+- name: default_connectivity
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service: connectivity
+    service-plan: lite
+- name: default_destination
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service: destination
+    service-plan: lite
 build-parameters:
   before-all:
   - builder: custom
