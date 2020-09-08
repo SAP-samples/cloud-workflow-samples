@@ -57,7 +57,12 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.la
                                             </items>
                                         </ComboBox>
                                         <Label text="Country"/>
-                                        <Input value="{/Investment/Country}"/>
+                                         <ComboBox items="{
+                                                    path: '/Suppliers',
+                                                    sorter: { path: 'Country' }
+                                                }">
+                                                <core:Item key="{Country}" text="{Country}" />
+                                            </ComboBox>
                                         <Label text="Division"/>
                                         <Input value="{/Investment/Division}"/>
                                         <Label text="Description"/>
