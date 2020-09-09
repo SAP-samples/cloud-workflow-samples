@@ -1,5 +1,5 @@
 _schema-version: "3.2"
-ID: SampleCapexApprovalProcess
+ID: SampleCapitalExpenditureApprovalProcess
 version: 0.0.1
 modules:
   - name: CapEx

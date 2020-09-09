@@ -1,0 +1,109 @@
+{
+	"id": "samplecapexapprovalprocess",
+	"name": "Sample Capital Expenditure Approval Process",
+	"documentation": "Sample capital expenditure approval process template. It contains two steps. First step is of initializing the process context and next is the approval step. Initialization step should always be the first step and can only be added once. Approval step is added after initialization step and can be added any number of times depending on the level of approvals needed. There are input configurations associated with the Approval step where user will be given options to enter the role and process step name. These input data will be used during execution of overall CapEx approval process. ",
+	"stepDefinitions": [{
+		"reference": "/steps/Approval.procstep",
+		"icon": "sap-icon://payment-approval",
+		"borderColor": "#d58215",
+		"inputParameters": [{
+			"id": "role",
+			"name": "Role Name",
+			"documentation": "Role Name of the Approver",
+			"type": "string",
+			"predefinedValue": "Local Manager"
+		}, {
+			"id": "approvalstep",
+			"name": "Approval Step",
+			"documentation": "Approval step name which will be as used to evaluate Business Rules",
+			"type": "string",
+			"predefinedValue": "LocalManager"
+		}]
+	}, {
+		"reference": "/steps/Initialization.procstep",
+		"icon": "sap-icon://begin",
+		"borderColor": "#687a33",
+		"constraints": {
+			"occurrence": {
+				"min": 1,
+				"max": 1
+			}
+		}
+	}],
+	"attributes": [{
+		"id": "RequestId",
+		"label": "Request Id",
+		"type": "string",
+		"value": "${context.RequestId}"
+	}, {
+		"id": "TotalCost",
+		"label": "Total Cost",
+		"type": "string",
+		"value": "${context.Investment.TotalCost}"
+	}, {
+		"id": "InvestmentType",
+		"label": "Investment Type",
+		"type": "string",
+		"value": "${context.Investment.Type}"
+	}, {
+		"id": "CAPEX",
+		"label": "CAPEX",
+		"type": "string",
+		"value": "${context.Investment.CAPEX}"
+	}, {
+		"id": "OPEX",
+		"label": "OPEX",
+		"type": "string",
+		"value": "${context.Investment.OPEX}"
+	}, {
+		"id": "ROI",
+		"label": "ROI",
+		"type": "string",
+		"value": "${context.Investment.ROI}"
+	}, {
+		"id": "IRR",
+		"label": "IRR",
+		"type": "string",
+		"value": "${context.Investment.IRR}"
+	}, {
+		"id": "Country",
+		"label": "Country/Region",
+		"type": "string",
+		"value": "${context.Investment.Country}"
+	}, {
+		"id": "Currency",
+		"label": "Currency",
+		"type": "string",
+		"value": "${context.Investment.Currency}"
+	}, {
+		"id": "BusinessUnit",
+		"label": "Business Unit",
+		"type": "string",
+		"value": "${context.Investment.BusinessUnit}"
+	}, {
+		"id": "EnergyEfficiency",
+		"label": "Energy Efficiency",
+		"type": "string",
+		"value": "${context.Sustainability.EnergyEfficiency}"
+	}, {
+		"id": "CO2Efficiency",
+		"label": "CO2 Efficiency",
+		"type": "string",
+		"value": "${context.Sustainability.CO2Efficiency}"
+	}, {
+		"id": "EnergyCostSavings",
+		"label": "Energy Cost Savings",
+		"type": "string",
+		"value": "${context.Sustainability.EnergyCostSavings}"
+	}, {
+		"id": "WaterSavings",
+		"label": "Water Savings",
+		"type": "string",
+		"value": "${context.Sustainability.WaterSavings}"
+	}, {
+		"id": "ApprovalStatus",
+		"label": "Status of the Approval Workflow",
+		"type": "string",
+		"value": "${context.internal.approvalStatus}"
+	}]
+}
