@@ -1,0 +1,255 @@
+{
+    "id": "ConfirmOrChangeEquipment",
+    "schemaVersion": "1.0.0",
+    "name": "ConfirmOrChangeEquipment",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "personal_information",
+            "type": "section",
+            "title": "Personal Information",
+            "content": [
+                {
+                    "id": "user_id",
+                    "type": "string",
+                    "label": "User ID",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].userId}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "first_name",
+                    "type": "string",
+                    "label": "First Name",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].firstName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "last_name",
+                    "type": "string",
+                    "label": "Last Name",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].lastName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "address_line_1",
+                    "type": "string",
+                    "label": "Address",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].addressLine1}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "address_line_2",
+                    "type": "string",
+                    "label": "City",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].city}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "country",
+                    "type": "string",
+                    "label": "Country",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].country}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "job_information",
+            "type": "section",
+            "title": "Job Information",
+            "content": [
+                {
+                    "id": "job_code",
+                    "type": "string",
+                    "label": "Job Code",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].jobCode}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "job_title",
+                    "type": "string",
+                    "label": "Job Title",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].empInfo.jobInfoNav.results[0].jobTitle}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "position",
+                    "type": "string",
+                    "label": "Position",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].empInfo.jobInfoNav.results[0].position}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "location",
+                    "type": "string",
+                    "label": "Location",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].location}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "is_full_time",
+                    "type": "boolean",
+                    "label": "Is Full Time",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].empInfo.jobInfoNav.results[0].isFulltimeEmployee}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "unit_information",
+            "type": "section",
+            "title": "Unit Information",
+            "content": [
+                {
+                    "id": "cost_center",
+                    "type": "string",
+                    "label": "Cost Center",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].empInfo.jobInfoNav.results[0].costCenter}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "division",
+                    "type": "string",
+                    "label": "Division",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].division}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "deparment",
+                    "type": "string",
+                    "label": "Department",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].department}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "business_unit",
+                    "type": "string",
+                    "label": "Business Unit",
+                    "readOnly": true,
+                    "value": "${context.empData.d.results[0].empInfo.jobInfoNav.results[0].businessUnit}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "equipment_needed",
+            "type": "section",
+            "title": "Equipment Needed",
+            "content": [
+                {
+                    "id": "equipment",
+                    "type": "collection",
+                    "title": "Equipment",
+                    "addEnabled": true,
+                    "deleteEnabled": true,
+                    "value": "${context.equipment.EquipmentsInfo}",
+                    "content": [
+                        {
+                            "id": "product_id",
+                            "type": "string",
+                            "label": "Product ID",
+                            "readOnly": false,
+                            "value": "${item.ProductID}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "product_description",
+                            "type": "string",
+                            "label": "Product Description",
+                            "readOnly": false,
+                            "value": "${item.ProdDesc}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "type",
+                            "type": "string",
+                            "label": "Type",
+                            "readOnly": false,
+                            "value": "${item.EquipmentType}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "price",
+                            "type": "float",
+                            "label": "Price",
+                            "readOnly": false,
+                            "value": "${item.Price}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "status",
+                            "type": "string",
+                            "label": "Status",
+                            "readOnly": true,
+                            "value": "${item.Status}",
+                            "constraints": {
+                                "required": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Confirm",
+            "decisionType": "positive"
+        }
+    ]
+}
