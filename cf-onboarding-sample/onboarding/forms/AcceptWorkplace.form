@@ -247,8 +247,8 @@
     ],
     "decisions": [
         {
-            "id": "approve",
-            "text": "Confirm",
+            "id": "accept",
+            "text": "Accept Workplace",
             "decisionType": "positive"
         }
     ]
