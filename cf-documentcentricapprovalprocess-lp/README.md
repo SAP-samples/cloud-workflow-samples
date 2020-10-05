@@ -24,6 +24,7 @@ There are two Mutlitarget Application Projects and one process visibility scenar
 ## Pre-Requisites
 The following SAP Cloud Platform services are required for this scenario.
  - SAP Cloud Platform Workflow Management
+ - SAP Cloud Platform Business Application Studio / WebIDE
  - SAP Cloud Platform Portal
  - SAP Cloud Platform Document Management
  - SAP Cloud Platform Identity Authentication 
