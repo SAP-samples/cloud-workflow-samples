@@ -51,7 +51,7 @@ Workflows to trigger actions from process visibility.
 ### Capital Expenditure Approval Process - Custom UIs
 1. Unzip CustomUIForCapex.zip under the folder User Interface into your local folder.
 2. Drag and drop the project to the SAP Business Application Studio under the PROJECTS Explorer .
-3. Depending on your SAP Cloud Platform account type described in the [subscription section of help document](https://help.sap.com/viewer/6f55baaf330443bd8132d071581bbae6/Cloud/en-US/c63dffcfd1cd4373bee43490c7d2e4bd.html),please adjust the mta.yaml file as showen in the below picture.
+3. Depending on your SAP Cloud Platform account type described in the [subscription section of help document](https://help.sap.com/viewer/6f55baaf330443bd8132d071581bbae6/Cloud/en-US/c63dffcfd1cd4373bee43490c7d2e4bd.html),please adjust the mta.yaml file as shown in the below picture.
 
 ![mtayaml](https://github.com/SAP-samples/cloud-workflow-samples/blob/master/cf-capitalexpenditure-lp/images/mta.yaml.changes.png?raw=true)
 
