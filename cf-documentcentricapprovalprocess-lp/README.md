@@ -61,7 +61,6 @@ Real time visibility into document centric approval process with key performance
 2. Import the project  into SAP Business Application Studio.
 3. Depending on your SAP Cloud Platform account type described in the [subscription section of help document](https://help.sap.com/viewer/6f55baaf330443bd8132d071581bbae6/Cloud/en-US/c63dffcfd1cd4373bee43490c7d2e4bd.html) , please adjust the mta.yaml file as showen in the below picture.
 ![mtayaml](https://github.com/SAP-samples/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/mta.yaml.change.png?raw=true)
-
 4. [Build the project and deploy the archive](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/97ef204c568c4496917139cee61224a6.html)  to your cloud platform account
 
 ### Document Approval Process - Visibility Scenario
