@@ -64,7 +64,7 @@
                 {
                     "id": "country",
                     "type": "string",
-                    "label": "Country",
+                    "label": "Country/Region",
                     "readOnly": true,
                     "value": "${context.empData.d.results[0].country}",
                     "constraints": {
