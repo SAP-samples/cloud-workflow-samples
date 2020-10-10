@@ -1,0 +1,42 @@
+{
+	"_version":"3.0",
+	"identification":{
+		"id":"cross.fnd.fiori.inbox",
+		"entityType":"businessapp"
+	},
+	"payload":{
+		"visualizations":{
+			"WorkflowTask-MyInboxWithSubstitution":{
+				"vizType":"sap.ushell.DynamicAppLauncher",
+				"vizConfig":{
+					"sap.app":{
+						"title":"My Inbox",
+						"description":"Manage Tasks",
+						"tags":{
+
+						}
+					},
+					"sap.flp":{
+						"target":{
+							"inboundId":"WorkflowTask-DisplayMyInbox",
+							"parameters":{
+								"substitution":{
+									"value":{
+										"value":"true",
+										"format":"plain"
+									}
+								},
+								"userSearch":{
+									"value":{
+										"value":"false",
+										"format":"plain"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

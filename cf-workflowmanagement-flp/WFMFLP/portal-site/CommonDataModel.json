@@ -47,17 +47,17 @@
 			},
 			"payload": {
 				"viz": [{
-					"id": "cross.fnd.fiori.inbox-0-1568986171400",
+					"id": "cross.fnd.fiori.inbox-0-1602342157475",
 					"appId": "cross.fnd.fiori.inbox",
-					"vizId": "WorkflowTask-DisplayMyInbox"
-				}, {
-					"id": "com.sap.bpm.monitorworkflow-1-1568986171400",
-					"appId": "com.sap.bpm.monitorworkflow",
-					"vizId": "bpmworkflowmonitor-DisplayDefinitions"
+					"vizId": "WorkflowTask-MyInboxWithSubstitution"
 				}, {
 					"id": "com.sap.bpm.monitorworkflow-2-1568986171400",
 					"appId": "com.sap.bpm.monitorworkflow",
 					"vizId": "bpmworkflowmonitor-DisplayInstances"
+				}, {
+					"id": "com.sap.bpm.monitorworkflow-1-1568986171400",
+					"appId": "com.sap.bpm.monitorworkflow",
+					"vizId": "bpmworkflowmonitor-DisplayDefinitions"
 				}]
 			}
 		}, {
