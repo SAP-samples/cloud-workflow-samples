@@ -36,22 +36,29 @@ The following modules are available in this multi target application project.
 #### Document Approval - Workflow Module
 A workflow model enable multiple approval or review steps in a sequencial way and process the decision of task owners.
 ![Workflow](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/documentWorkflow.jpg?raw=true)
-
-#### Document Centric Task UI - SAP UI5 module
-Approval or review taskuis using SAP UI5 and integtrated with SAP Cloud Platform Document Management.
 #### Document Centric Start UI - SAP UI5 module
-Workflow start ui to create a document review or approval request and attach one or more documents. The start UI integrated with SAP Cloud Platform Document Management and Identity Authentication Service. 
+Workflow start ui to create a document review or approval request and attach one or more documents. The start UI integrated with SAP Cloud Platform Document Management and Identity Authentication Service.
+A requestor can add multiple approvers or reviewers , optionally add watchers and set dead line for each steps. When a taskowner complete the task, watcher will be informed through email notification.
+![StartUI](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/startUI.png?raw=true) 
+#### Document Centric Task UI - SAP UI5 module
+Approval or review taskuis using SAP UI5 and integtrated with SAP Cloud Platform Document Management.  Approver or reviewer can forward the task to other business users. 
+![TaskUI](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/taskUI.png?raw=true) 
+
+Forward task by inviting other business users who are not task owners but collaborate with experts. The forwarded task owner can share comments and send the task back to the approver.
+![TaskForwarding](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/taskforwarding.png?raw=true) 
 #### Document Centric Rework UI - SAP UI5 module
 Rework of request using SAP UI5 and integrated with SAP Cloud Platform Document Manaagement.
-
+An approver can request for rework and requestor can modify or attach additional documents to the request.
+![TaskForwarding](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/reworktask.png?raw=true) 
 #### CustomUI - Fiori Launchpad module
 A fiori launch pad module include My Inbox, Start UI application and Process Visibility Workspace.
-
+![TaskForwarding](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/fiorilaunchpad.png?raw=true) 
 #### Document Approval - Process Visibility scenario
 Real time visibility into document centric approval process with key performance indicators.
-
+![ProcessVisibility](https://github.com/SAP/cloud-workflow-samples/blob/master/cf-documentcentricapprovalprocess-lp/images/processvisibility.png?raw=true)
 ## Build and Deploy Multi Target Application and Visibility scenario
  ### Document Centric Approval Process
+  
 1. Unzip Document Centric Approval Process.zip under the folder WorkflowAndUI5Modules     into your local folder
 2. Import the project  into SAP Business Application Studio.
 3. [Build the project and deploy the archive](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/97ef204c568c4496917139cee61224a6.html)  to your cloud platform account.
