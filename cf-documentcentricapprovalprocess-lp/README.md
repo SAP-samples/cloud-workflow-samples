@@ -28,8 +28,6 @@ The following SAP Cloud Platform services are required for this scenario.
  - SAP Cloud Platform Portal
  - SAP Cloud Platform Document Management
  - SAP Cloud Platform Identity Authentication 
- A service instance with name **"Workflow"** of SAP Cloud Platform Workflow with the following scopes
-  - WORKFLOW_INSTANCE_START
   
 ### DocumentApproval
 The following modules are available in this multi target application project.
