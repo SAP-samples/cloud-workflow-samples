@@ -10,7 +10,7 @@ Purchase Requisition Approval and Release Process enable customers to automate a
 ## Pre-Requisites
 The following SAP Cloud Platform services are required for this scenario:
   - Application Runtime
-  - SAP Cloud Platform Business Application Studio / Web IDE
+  - SAP Cloud Platform Business Application Studio 
   - SAP Cloud Platform Workflow management
    - SAP Cloud Platform Integration (in SAP Cloud Platform Neo landscape)
    - SAP Cloud Platform Portal
