@@ -16,7 +16,8 @@ In SAP Business Application Studio, ensure that a dev space is available for SAP
 1. Unzip NonPOVendorInvoiceUI.zip.
 2. Drag and drop the project to the SAP Business Application Studio under the PROJECTS Explorer .
 3. Depending on your SAP Cloud Platform account type described in the [subscription section of help document](https://help.sap.com/viewer/6f55baaf330443bd8132d071581bbae6/Cloud/en-US/c63dffcfd1cd4373bee43490c7d2e4bd.html) , please adjust the mta.yaml appropriately.
-4. [Build the project and deploy the archive](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/97ef204c568c4496917139cee61224a6.html)  to your cloud platform account.
+4. In case you are using the Document Information Extraction service, replace the url within 'onOpenDocXSaaS' in 'Create.controller.js' with your DocX application url.
+5. [Build the project and deploy the archive](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/97ef204c568c4496917139cee61224a6.html)  to your cloud platform account.
 
 ### NonPOVendorInvoiceHeaderProcess - Header Workflow
 1. Unzip NonPOVendorInvoiceHeaderProcess.zip.
