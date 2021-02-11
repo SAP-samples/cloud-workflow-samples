@@ -26,8 +26,8 @@ In SAP Business Application Studio, ensure that a dev space is available for SAP
 4. [Build the project and deploy the archive](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/97ef204c568c4496917139cee61224a6.html)  to your cloud platform account.
 
 ### NonPOVendorInvoiceSearchHelpPolicy - Value Help Policy
-1. Import the NonPOVendorInvoiceSearchHelpPolicy.zip business rules project by following the instructions [here] (https://help.sap.com/viewer/0e4dd38c4e204f47b1ffd09e5684537b/Cloud/en-US/aab7501ef811440c8b419cff02dea43a.html)
-2. Activate and deploy the rule services within the project. Refer to the following [help doc instructions ] (https://help.sap.com/viewer/0e4dd38c4e204f47b1ffd09e5684537b/Cloud/en-US/0d449b981aad4e19b978d59acaf3f3af.html)
+1. Import the NonPOVendorInvoiceSearchHelpPolicy.zip business rules project by following the instructions [here](https://help.sap.com/viewer/0e4dd38c4e204f47b1ffd09e5684537b/Cloud/en-US/aab7501ef811440c8b419cff02dea43a.html)
+2. Activate and deploy the rule services within the project. Refer to the following [help doc instructions](https://help.sap.com/viewer/0e4dd38c4e204f47b1ffd09e5684537b/Cloud/en-US/0d449b981aad4e19b978d59acaf3f3af.html)
 
 ## License
 
