@@ -1,15 +1,15 @@
-# Enable Collaboration and Document Management in SAP Cloud Platform Workflow using SAP Jam
+# Enable Collaboration and Document Management in SAP Workflow Management using SAP Jam
 
 ## Description
-This sample workflow application with a real-world example, helps you to experience collaboration feature in SAP Cloud Platform Workflow using SAP Jam. You could also use this sample application to start custom approval workflow for all or certain documents uploaded in SAP Jam.
+This sample workflow application with a real-world example, helps you to experience collaboration feature in SAP Workflow Management using SAP Jam. You could also use this sample application to start custom approval workflow for all or certain documents uploaded in SAP Jam.
 
 Steve is the head of business accounting in ITeLo (an imaginary company) and is responsible for the audit reports of financial statements. For his job, Steve is in contact with people from all over the world to get things done. But Steve has a problem right now – the audit documents are reviewed manually. The manual processing of documents leads to an inefficient global collaboration due to duplication of data and limits the information on its current status.
 
-Steve now has SAP Cloud Platform Workflow to orchestrates the entire audit review process and SAP Jam to enable collaboration between the team and to manage the document involved.
+Steve now has SAP Workflow Management to orchestrates the entire audit review process and SAP Jam to enable collaboration between the team and to manage the document involved.
 
 The scenario is explained in detailed in the following blog:
 
-[Enable Collaboration and Document Management in SAP Cloud Platform Workflow using SAP Jam](https://blogs.sap.com/2018/05/03/enable-collaboration-and-document-management-in-sap-cloud-platform-workflow-using-sap-jam/)
+[Enable Collaboration and Document Management in SAP Workflow Management using SAP Jam](https://blogs.sap.com/2018/05/03/enable-collaboration-and-document-management-in-sap-cloud-platform-workflow-using-sap-jam/)
 
 ### Solution Diagram
 
@@ -19,12 +19,12 @@ The scenario is explained in detailed in the following blog:
 ![Workflow Model](https://blogs.sap.com/wp-content/uploads/2018/05/WorkflowModel.jpg)
 
 ## Requirements
-1. SAP Cloud Platform Tenant -  If you do not have one, then you could get your hands on to [a free trial account](http://cloudplatform.sap.com/try.html).
-2. Active subscription to [SAP Cloud Platform Workflow](https://www.sap.com/developer/tutorials/cp-workflow-getting-started.html) in your SAP Cloud Platform tenant.
+1. SAP BTP Tenant -  If you do not have one, then you could get your hands on to [a free trial account](https://account.hanatrial.ondemand.com/trial/#/home/trial).
+2. Active subscription to [SAP Workflow Management](https://www.sap.com/developer/tutorials/cp-workflow-getting-started.html) in your SAP BTP tenant.
 3. [Enable Workflow feature](https://help.sap.com/viewer/f85276c5069a429fa37d1cd352785c25/Cloud/en-US/07adfa6d819a42e9966e63de1a654de4.html) in SAP WebIDE Full-Stack.
-4. Active subscription to Portal service and SAP WebIDE Full-Stack in your SAP Cloud Platform tenant.
-5. Active subscription to SAP Jam service. The [SAP Jam Developer Edition](https://help.sap.com/viewer/u_collaboration_dev_help/b0d33e22661a44699b163baafb17c9d7.html) is available for free as part of SAP Cloud Platform trial account.
-6. The SAP Cloud Platform tenant and SAP Jam tenant should have the same identity provider (IdP). In the trial account, SAP ID Service is the default IdP for both the accounts. In your factory account you could use SAP Cloud Platform Identify Authentication Service (IAS) as the IdP, but make sure that **User ID** is configured as the *Name ID attribute* for both SAP Jam and SAP Cloud Platform applications in SAP IAS.
+4. Active subscription to Portal service and SAP WebIDE Full-Stack in your SAP BTP tenant.
+5. Active subscription to SAP Jam service. The [SAP Jam Developer Edition](https://help.sap.com/viewer/u_collaboration_dev_help/b0d33e22661a44699b163baafb17c9d7.html) is available for free as part of SAP BTP trial account.
+6. The SAP BTP tenant and SAP Jam tenant should have the same identity provider (IdP). In the trial account, SAP ID Service is the default IdP for both the accounts. In your factory account you could use SAP Identify Authentication Service (IAS) as the IdP, but make sure that **User ID** is configured as the *Name ID attribute* for both SAP Jam and cloud applications in SAP IAS.
 
 ## Download and Installation
 - Download or clone the following content from the Git repository:
@@ -34,7 +34,7 @@ cloud-workflow-samples --> collaboration-sample
 
 ## Configuration
 Follow the instructions [mentioned in this blog](https://blogs.sap.com/2018/06/18/pre-requisite-for-sap-cloud-platform-workflow-with-sap-jam-sample-application/) to complete the below pre-requisites.
--  Setup trust between SAP Cloud Platform and SAP Jam.
+-  Setup trust between SAP BTP and SAP Jam.
 -  Setup SAP Jam Group for uploading the documents.
 -  Identify SAP Jam Endpoint URLs & folder IDs.
 
@@ -44,13 +44,13 @@ Once the above pre-requisites are completed, then follow these steps to complete
 
 ![Configuration File](https://blogs.sap.com/wp-content/uploads/2018/06/39.jpg)
 
-- In the Requestor and Approvers node, enter the userIDs in *upper case* (your SAP Cloud Platform User ID) who should get the tasks in My Inbox application. This user should have access to My Inbox application in SAP Cloud Platform, and also part of the ‘Document Approvals’ group created as part of pre-requisite step.
+- In the Requestor and Approvers node, enter the userIDs in *upper case* (your SAP BTP User ID) who should get the tasks in My Inbox application. This user should have access to My Inbox application in SAP BTP, and also part of the ‘Document Approvals’ group created as part of pre-requisite step.
 
 ![Configuration File](https://blogs.sap.com/wp-content/uploads/2018/06/40.jpg)
 
 - Save configuration.json file.
-- Under the **workflows** folder, right-click **DocumentAuditProcess.workflow** and choose **Deploy --> Deploy to SAP Cloud Platform Workflow**.
-- Right-click the project **sample.collaboration** and choose **Deploy --> Deploy to SAP Cloud Platform**.
+- Under the **workflows** folder, right-click **DocumentAuditProcess.workflow** and choose **Deploy --> Deploy to SAP Workflow Management**.
+- Right-click the project **sample.collaboration** and choose **Deploy --> Deploy to SAP BTP**.
 
 #### Start Document Audit Workflow
 The SAPUI5 application to initiate the workflow is available as part of the sample application which you have deployed. Follow these steps to access it:
@@ -66,13 +66,13 @@ The SAPUI5 application to initiate the workflow is available as part of the samp
 - Click the hyperlink **Link to Document** to access the document uploaded in SAP Jam.
 
 #### Execute Workflow
-- Go to SAP Cloud Platform Cockpit, select Services and search **Workflow**  service.
+- Go to SAP BTP Cockpit, select Services and search **Workflow**  service.
 - Click on **Workflow**  tile and navigate to Workflow Service overview page.
 - Click the hyperlink **Fiori Launchpad (Default Site)**.
-- Once logged in to Fiori Launchpad you should see a Fiori tile called **My Inbox**. If that tile is *not* available, then 
+- Once logged in to Fiori Launchpad you should see a Fiori tile called **My Inbox**. If that tile is *not* available, then
 
 	- Click on the user icon and then App Finder icon.
-	- Select workflow catalog and pin My Inbox, Monitor Workflows -> Workflow Definitions and Monitor Workflows -> Workflow Instances applications to the group My Home. If you do not see any apps, then assign the TENANT_ADMIN role of Portal ervice to your ID, logout and login again. 
+	- Select workflow catalog and pin My Inbox, Monitor Workflows -> Workflow Definitions and Monitor Workflows -> Workflow Instances applications to the group My Home. If you do not see any apps, then assign the TENANT_ADMIN role of Portal ervice to your ID, logout and login again.
 	- Once you are out of the edit mode, you should have the three Fiori apps available in your Fiori Launchpad, and you should see four tasks available in My Inbox application.
 
 - Click the **My Inbox** tile.
@@ -105,4 +105,5 @@ No known issues.
 The project is provided "as-is", with no expected changes or support.
 
 ## License
+
 Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](https://github.com/SAP-samples/fsm-extension-sample/blob/master/LICENSE) file
