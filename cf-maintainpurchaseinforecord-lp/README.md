@@ -17,7 +17,7 @@ To import and successfully setup the SAPUI5 , you need a SAP BTP tenant (*Cloud 
 2. SAP Workflow Management (to orchestrate the process).
 3. SAP Business Rules service (to configure business conditions in the process).
 4. SAP Process Visibility service (to view the pre-built dashboard to monitor the process in real-time).
-5. SAP HTML5 Application Repository Service for SAP BTP to deploy the UI5 apps.
+5. SAP BTP Cloud Foundry runtime.
 
 ### Deploy SAPUI5 App
 1. Download the Multi-Target Application (MTA) project CustomUIForPurchaseInfoRecord.zip.
