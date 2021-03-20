@@ -1,4 +1,4 @@
-# Capital Expenditure Approval Process using SAP Business Technology Platform Platform Workflow Management
+# Capital Expenditure Approval Process using SAP Business Technology Platform Workflow Management
 ## Overview
 The CAPEX process enables customers to automate capital expenditure request approvals and provide automation across all steps. A request is created by the user and depending on the amount of investment and other related attributes, number of approval steps are determined.  The following steps are included as a part of this CAPEX process:
 - Business user creates a Capital Expenditure Approval Process request
