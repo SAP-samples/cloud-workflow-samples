@@ -1,6 +1,6 @@
-# Purchase Requisition Approval and Release using SAP Cloud Platform Workflow Management
+# Purchase Requisition Approval and Release using SAP Business Technology Platform Workflow Management
 ## Overview
-Purchase Requisition Approval and Release Process enable customers to automate approval and release of Line Items in a flexible and transparent way. It provides flexibility in choosing process variants depending on attributes like Request date, Price, Material Group, Document Type, Plant, Purchasing Group and Purchasing Organization etc. When a requestor creates a Purchase Request with line items in SAP ERP, pre-configured Process Variants are triggered in SAP Cloud Platform Workflow Management. 
+Purchase Requisition Approval and Release Process enable customers to automate approval and release of Line Items in a flexible and transparent way. It provides flexibility in choosing process variants depending on attributes like Request date, Price, Material Group, Document Type, Plant, Purchasing Group and Purchasing Organization etc. When a requestor creates a Purchase Request with line items in SAP ERP, pre-configured Process Variants are triggered in SAP Business Technology Platform Workflow Management. 
 •	Line Item data validated using Business Rules before approval.
 •	Approvers are determined using a Business Rule / external system.
 •	Approvers are notified via email.
@@ -8,18 +8,18 @@ Purchase Requisition Approval and Release Process enable customers to automate a
 •	Line Item released in SAP ERP for Purchase Order creation.
 
 ## Pre-Requisites
-The following SAP Cloud Platform services are required for this scenario:
+The following SAP Business Technology Platform services are required for this scenario:
   - Application Runtime
-  - SAP Cloud Platform Business Application Studio 
-  - SAP Cloud Platform Workflow management
-   - SAP Cloud Platform Integration (in SAP Cloud Platform Neo landscape)
-   - SAP Cloud Platform Portal
-   -  SAP Cloud Platform Cloud Connector
-   -  SAP Cloud Platform Identity Authentication Service (optional)
-   -  This content package requires SAP ERP 6.0 as the back-end application. 
+  - SAP  Business Application Studio 
+  - SAP  Workflow management
+  - SAP  Integration Service
+  - SAP  Cloud Portal / Launchpad Service
+  - SAP  Cloud Connector
+  - SAP Identity Authentication Service (optional)
+This content package requires SAP ERP 6.0 as the back-end application. 
 
   
-SAP Cloud Platform Workflow Management provides standard content for automating [Purchase Request Approval and Release](https://api.sap.com/package/purchaserequesitionapprovalandrelease?section=Overview).
+SAP  Workflow Management provides standard content for automating [Purchase Request Approval and Release](https://api.sap.com/package/purchaserequesitionapprovalandrelease?section=Overview).
 
 ## Purchase Request Approval and Release
 The following modules are available in this multi target application project.
@@ -36,15 +36,13 @@ Please note that during deployment of the project those resources will be proces
 
 #### CreatePurchaseRequisition   - SAP UI5 module
 User interface to create new Purchase Request Approval and Release process.
-#### IntializePurchaseRequisitionApproval   - SAP Cloud Platform Workflow module
+#### IntializePurchaseRequisitionApproval   - SAP Workflow Service module
 Workflow to determine process variant and start approval process.
-#### FLP          - SAP Cloud Platform Fiori launchpad module
-Fiori Launch Pad module to access various applications.
 
-### Purchase Requisition Visibility Workflows
-This project contains the workflows used by SAP Cloud Platform Visibility action workflows. 
+### Purchase Requisition insight to actions Workflows
+This project contains the workflows used as insight to action workflows. 
 
-#### PurchaseRequisitionAction  -  SAP Cloud Platform Workflow Module
+#### PurchaseRequisitionAction  -  SAP  Workflow Service Module
 Workflows to trigger actions from process visibility.
 
 ## Build and Deploy Multi Target Applications
@@ -52,7 +50,7 @@ Workflows to trigger actions from process visibility.
 ### Custom UI for Purchase Request Approval and Release
 1. Unzip CreatePurchaseRequisitionAndApprovalProcess.zipzip under the folder User Interface into your local folder.
 2. Drag and drop the project to the SAP Business Application Studio under the PROJECTS Explorer .
-3. Depending on your SAP Cloud Platform account type described in the [subscription section of help document](https://help.sap.com/viewer/6f55baaf330443bd8132d071581bbae6/Cloud/en-US/c63dffcfd1cd4373bee43490c7d2e4bd.html),please adjust the mta.yaml file as shown in the below picture.
+3. Depending on your SAP Business Technology Platform account type described in the [subscription section of help document](https://help.sap.com/viewer/6f55baaf330443bd8132d071581bbae6/Cloud/en-US/c63dffcfd1cd4373bee43490c7d2e4bd.html),please adjust the mta.yaml file as shown in the below picture.
 
 ![mtayaml](https://github.com/SAP-samples/cloud-workflow-samples/blob/master/cf-purchase-requisition-approval-lp/images/mta.yaml.changes.png?raw=true)
 
