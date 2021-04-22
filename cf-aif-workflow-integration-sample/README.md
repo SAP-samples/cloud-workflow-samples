@@ -15,7 +15,7 @@ Within the processing in SAP Workflow service, the users are able to see the err
 # Requirements
 To follow this setup guide, you need the following: 
 * SAP Business Technology Platform tenant - If you don't have one, you could get your hands on a [free trial account](https://www.sap.com/products/business-technology-platform/trial.html)
-* Run tutorials [Boosters](https://developers.sap.com/tutorials/cp-starter-ibpm-employeeonboarding-1-setup.html) in your SAP BTP global account to setup your SAP Workflow service.
+* Run this [tutorial](https://developers.sap.com/tutorials/cp-starter-ibpm-employeeonboarding-1-setup.html) in your SAP BTP global account to setup your SAP Workflow Management services.
 * [Enable the Workflow Management feature](https://help.sap.com/viewer/e157c391253b4ecd93647bf232d18a83/Cloud/en-US/bbcaf0a8527e4dabadcda317f039c078.html) in SAP Business Application Studio  
 
 * Active subscription to SAP Connectivity service, SAP Destination service in your SAP BTP tenant
@@ -224,7 +224,7 @@ Log on to your SAP S/4HANA system.
 Send the SAP Application Interface Framework message with error logs for the interface you configured previously.
 
 # Monitoring at SAP BTP	
-Open your SAP Workflow lauchpad as tutorial step 2.    
+Open your SAP Workflow Management Lauchpad ([as described in tutorial step 2](https://developers.sap.com/tutorials/cp-starter-ibpm-employeeonboarding-1-setup.html)).    
 In the Fiori Launchpad, select “My Inbox” to display the user task application.    
 Select the list item to display the AIF message information.   
 It should look like this:  
