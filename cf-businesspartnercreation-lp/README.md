@@ -20,7 +20,7 @@ The following SAP Business Technology Platform services are required for this sc
   - SAP Cloud  Portal / Launchpad Service
   - SAP Identity Authentication Service (optional)
 
-SAP  Workflow Management provides standard content for automating [Business Partner Creation Approval Process](https://api.sap.com/package/businesspartnercreationapprovalprocess?section=Overview.
+SAP  Workflow Management provides standard content for automating [Business Partner Creation Approval Process](https://api.sap.com/package/businesspartnercreationapprovalprocess?section=Overview).
 
 ## Business Partner Creation Approval
 The following projects are available in this content package.
