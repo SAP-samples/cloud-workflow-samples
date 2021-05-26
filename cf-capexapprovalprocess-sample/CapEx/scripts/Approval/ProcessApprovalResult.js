@@ -1,11 +1,11 @@
-var task = $.usertasks['###activity.id:usertask1###'].last;
+var task = $.usertasks.usertask1.last;
 
 $.context.internal.step.lastDecision = task.decision;
 
 
 var decision = {
 	"Id": task.processor,
-	"Role": "###role###",
+	"Role": $.context.role,
 	"Decision": task.decision,
 	"Comments": $.context.comments
 };

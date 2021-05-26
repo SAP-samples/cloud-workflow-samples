@@ -1,11 +1,12 @@
 {
     "id": "approvalform",
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "name": "ApprovalForm",
     "revision": "1.0",
     "type": "task",
     "readOnly": false,
-    "content": [{
+    "content": [
+        {
             "id": "investment_details",
             "type": "section",
             "title": "Investment Details",
@@ -122,16 +123,6 @@
                     "label": "ROI",
                     "readOnly": true,
                     "value": "${context.Investment.ROI}",
-                    "constraints": {
-                        "required": false
-                    }
-                },
-                {
-                    "id": "currency",
-                    "type": "string",
-                    "label": "Currency",
-                    "readOnly": true,
-                    "value": "${context.Investment.Currency}",
                     "constraints": {
                         "required": false
                     }
@@ -305,8 +296,10 @@
                     }
                 }
             ]
-        }],
-    "decisions": [  {
+        }
+    ],
+    "decisions": [
+        {
             "id": "approve",
             "text": "Approve",
             "decisionType": "positive"
@@ -320,5 +313,6 @@
             "id": "rework",
             "text": "Rework",
             "decisionType": ""
-        }]
+        }
+    ]
 }

@@ -1,6 +1,6 @@
 /************ Prepare Input Payload to Execute Rules ****************/
 var details = {
-	"ApprovalStep": "###approvalstep###",
+	"ApprovalStep": $.context.approvalstep,
 	"BusinessUnit": $.context.Investment.BusinessUnit,
 	"Country": $.context.Investment.Country,
 	"Type": $.context.Investment.Type,
@@ -8,8 +8,8 @@ var details = {
 };
 
 var rulesPayload = {
-	"RuleServiceId": "c814bc4040ac4d27aee4b69e3ca63568",
-	"RuleServiceRevision": "2006",
+	"RuleServiceId": "a37df8246b2048dfba6f07c46e6ed25f",
+	"RuleServiceRevision": "Trial",
 	"Vocabulary": [ { "Investment": details } ]
 };
 

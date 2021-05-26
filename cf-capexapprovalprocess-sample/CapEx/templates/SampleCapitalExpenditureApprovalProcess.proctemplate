@@ -1,9 +1,13 @@
 {
 	"id": "samplecapexapprovalprocess",
 	"name": "Sample Capital Expenditure Approval Process",
-	"documentation": "Sample capital expenditure approval process template. It contains two steps. First step is of initializing the process context and next is the approval step. Initialization step should always be the first step and can only be added once. Approval step is added after initialization step and can be added any number of times depending on the level of approvals needed. There are input configurations associated with the Approval step where user will be given options to enter the role and process step name. These input data will be used during execution of overall CapEx approval process. ",
+	"documentation": "Sample capital expenditure approval process template.",
+	"contentVersion": "2.0",
 	"stepDefinitions": [{
-		"reference": "/steps/Approval.procstep",
+		"id": "com.sap.bpm.process.start",
+		"name": "Start"
+	}, {
+		"reference": "/workflows/Approval.workflow",
 		"icon": "sap-icon://payment-approval",
 		"borderColor": "#d58215",
 		"inputParameters": [{
@@ -11,24 +15,28 @@
 			"name": "Role Name",
 			"documentation": "Role Name of the Approver",
 			"type": "string",
-			"predefinedValue": "Local Manager"
+			"predefinedValue": "Local Manager",
+			"targetVariable": "${context.role}"
 		}, {
 			"id": "approvalstep",
 			"name": "Approval Step",
 			"documentation": "Approval step name which will be as used to evaluate Business Rules",
 			"type": "string",
-			"predefinedValue": "LocalManager"
+			"predefinedValue": "LocalManager",
+			"targetVariable": "${context.approvalstep}"
 		}]
 	}, {
-		"reference": "/steps/Initialization.procstep",
+		"reference": "/workflows/Initialization.workflow",
 		"icon": "sap-icon://begin",
-		"borderColor": "#687a33",
+		"borderColor": "#336288",
 		"constraints": {
 			"occurrence": {
-				"min": 1,
-				"max": 1
+				"min": 1
 			}
 		}
+	}, {
+		"id": "com.sap.bpm.process.end",
+		"name": "End"
 	}],
 	"attributes": [{
 		"id": "RequestId",
@@ -105,5 +113,23 @@
 		"label": "Status of the Approval Workflow",
 		"type": "string",
 		"value": "${context.internal.approvalStatus}"
-	}]
+	}],
+	"contextMapping": {
+		"inputContextMapping": [{
+			"sourceExpression": "${context.Investment}"
+		}, {
+			"sourceExpression": "${context.Sustainability}"
+		}, {
+			"sourceExpression": "${context.Requester}"
+		}, {
+			"sourceExpression": "${context.RequestId}"
+		}, {
+			"sourceExpression": "${context.internal}"
+		}, {
+			"sourceExpression": "${context.Title}"
+		}]
+	},
+	"configurations": {
+		"enablePrincipalPropagation": false
+	}
 }
