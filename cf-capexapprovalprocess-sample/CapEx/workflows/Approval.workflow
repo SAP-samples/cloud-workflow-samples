@@ -95,7 +95,10 @@
 		"1d2cd879-15b6-4d4a-9d21-516a5d7622ec": {
 			"classDefinition": "com.sap.bpm.wfs.StartEvent",
 			"id": "startevent1",
-			"name": "Start Approval Step"
+			"name": "Start Approval Step",
+			"sampleContextRefs": {
+				"983ebb31-dc80-49dc-88e4-24adb32de268": {}
+			}
 		},
 		"7492ee08-9d0c-4c71-98bd-c0051cb7a87d": {
 			"classDefinition": "com.sap.bpm.wfs.EndEvent",
@@ -520,6 +523,11 @@
 			"exclusivegateway": 3,
 			"parallelgateway": 1,
 			"referencedsubflow": 2
+		},
+		"983ebb31-dc80-49dc-88e4-24adb32de268": {
+			"classDefinition": "com.sap.bpm.wfs.SampleContext",
+			"reference": "/sample-data/Approval/CapexSampleStartPayload.json",
+			"id": "default-start-context"
 		}
 	}
 }
