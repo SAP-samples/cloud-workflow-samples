@@ -1,3 +1,11 @@
+/************ Initialize the model, if not done ****************/
+if($.context.approvalstep == null){
+    $.context.approvalstep = "LocalManager",
+    $.context.History = [];
+    $.context.internal = {};
+    $.context.internal.step = {};
+}
+
 /************ Prepare Input Payload to Execute Rules ****************/
 var details = {
 	"ApprovalStep": $.context.approvalstep,
