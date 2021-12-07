@@ -1,0 +1,335 @@
+{
+    "id": "startapprovalform",
+    "schemaVersion": "1.1.0",
+    "name": "StartApprovalForm",
+    "revision": "1.0",
+    "type": "start",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "investment_request",
+            "type": "section",
+            "title": "Investment Requester",
+            "content": [
+                {
+                    "id": "first_name",
+                    "type": "string",
+                    "label": "First Name",
+                    "readOnly": false,
+                    "value": "${context.Requester.FirstName}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "last_name",
+                    "type": "string",
+                    "label": "Last Name",
+                    "readOnly": false,
+                    "value": "${context.Requester.LastName}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "email_address",
+                    "type": "string",
+                    "label": "Email Address",
+                    "placeholder": "username@example.com",
+                    "readOnly": false,
+                    "value": "${context.Requester.Email}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "user_id",
+                    "type": "string",
+                    "label": "User Id",
+                    "placeholder": "P000123",
+                    "readOnly": false,
+                    "value": "${context.Requester.UserId}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "comments",
+                    "type": "string",
+                    "label": "Comment from Requester",
+                    "readOnly": false,
+                    "value": "${context.Requester.Comments}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "medium"
+                        }
+                    },
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "investment_details",
+            "type": "section",
+            "title": "Investment Details",
+            "content": [
+                {
+                    "id": "request_id",
+                    "type": "string",
+                    "label": "Request Id",
+                    "readOnly": false,
+                    "value": "${context.RequestId}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "title",
+                    "type": "string",
+                    "label": "Title",
+                    "readOnly": false,
+                    "value": "${context.Title}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "type",
+                    "type": "string",
+                    "label": "Type",
+                    "readOnly": false,
+                    "value": "${context.Investment.Type}",
+                    "control": {
+                        "type": "Dropdown",
+                        "properties": {
+                            "items": [
+                                {
+                                    "value": "Software",
+                                    "displayValue": "Software"
+                                },
+                                {
+                                    "value": "Equipment",
+                                    "displayValue": "Equipment"
+                                },
+                                {
+                                    "value": "Service",
+                                    "displayValue": "Service"
+                                },
+                                {
+                                    "value": "Building",
+                                    "displayValue": "Building"
+                                },
+                                {
+                                    "value": "Machinery",
+                                    "displayValue": "Machinery"
+                                }
+                            ]
+                        }
+                    },
+                    "constraints": {
+                        "required": true,
+                        "enum": [
+                            "Software",
+                            "Equipment",
+                            "Service",
+                            "Building",
+                            "Machinery"
+                        ]
+                    }
+                },
+                {
+                    "id": "country",
+                    "type": "string",
+                    "label": "Country",
+                    "readOnly": false,
+                    "value": "${context.Investment.Country}",
+                    "control": {
+                        "type": "Dropdown",
+                        "properties": {
+                            "items": [
+                                {
+                                    "value": "Germany",
+                                    "displayValue": "Germany"
+                                },
+                                {
+                                    "value": "India",
+                                    "displayValue": "India"
+                                },
+                                {
+                                    "value": "USA",
+                                    "displayValue": "USA"
+                                }
+                            ]
+                        }
+                    },
+                    "constraints": {
+                        "required": true,
+                        "enum": [
+                            "Germany",
+                            "India",
+                            "USA"
+                        ]
+                    }
+                },
+                {
+                    "id": "division",
+                    "type": "string",
+                    "label": "Division",
+                    "readOnly": false,
+                    "value": "${context.Investment.Division}",
+                    "control": {
+                        "type": "Dropdown",
+                        "properties": {
+                            "items": [
+                                {
+                                    "value": "BPM",
+                                    "displayValue": "BPM"
+                                },
+                                {
+                                    "value": "Facility",
+                                    "displayValue": "Facility"
+                                },
+                                {
+                                    "value": "IT",
+                                    "displayValue": "IT"
+                                }
+                            ]
+                        }
+                    },
+                    "constraints": {
+                        "required": true,
+                        "enum": [
+                            "BPM",
+                            "Facility",
+                            "IT"
+                        ]
+                    }
+                },
+                {
+                    "id": "description",
+                    "type": "string",
+                    "label": "Description",
+                    "readOnly": false,
+                    "value": "${context.Investment.Description}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "medium"
+                        }
+                    },
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "capex",
+                    "type": "float",
+                    "label": "CAPEX",
+                    "readOnly": false,
+                    "value": "${context.Investment.CAPEX}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "opex",
+                    "type": "float",
+                    "label": "OPEX",
+                    "readOnly": false,
+                    "value": "${context.Investment.OPEX}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "amount",
+                    "type": "float",
+                    "label": "Total Cost",
+                    "readOnly": false,
+                    "value": "${context.Investment.TotalCost}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "irr",
+                    "type": "float",
+                    "label": "IRR",
+                    "readOnly": false,
+                    "value": "${context.Investment.IRR}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "roi",
+                    "type": "float",
+                    "label": "ROI",
+                    "readOnly": false,
+                    "value": "${context.Investment.ROI}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "sustainability",
+            "type": "section",
+            "title": "Sustainability",
+            "content": [
+                {
+                    "id": "energyefficiency",
+                    "type": "float",
+                    "label": "Energy Efficiency %",
+                    "readOnly": false,
+                    "value": "${context.Sustainability.EnergyEfficiency}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "co2efficiency",
+                    "type": "float",
+                    "label": "CO2 Efficiency %",
+                    "readOnly": false,
+                    "value": "${context.Sustainability.CO2Efficiency}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "energycostsavings",
+                    "type": "float",
+                    "label": "Energy Cost Savings %",
+                    "readOnly": false,
+                    "value": "${context.Sustainability.EnergyCostSavings}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "watersavings",
+                    "type": "float",
+                    "label": "Water Savings %",
+                    "readOnly": false,
+                    "value": "${context.Sustainability.WaterSavings}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "id": "approve",
+            "text": "Request Approval",
+            "workflowDefinitionId": "approval",
+            "workflowPath": "/home/user/projects/cf-capexapprovalprocess-sample/CapEx/workflows/Approval.workflow"
+        }
+    ]
+}
