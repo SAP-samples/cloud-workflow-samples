@@ -1,0 +1,23 @@
+  {
+    "RequestId": "CAPEX_REQ_001",
+    "Title": "Build mobile apps",
+    "Requester": {
+        "Name":"<your name>",
+        "UserId":"<your userId>",
+        "Comment":"Please Approve"
+    },
+    "Investment": {
+        "Type": "Software",
+        "Description": "Provide a fresh experience for our customers by providing new apps for our services",
+        "TotalCost": 15000,
+        "CAPEX": 10000,
+        "OPEX": 5000,
+        "ROI": 5,
+        "Currency": "EUR",
+        "BusinessUnit": "Purchasing",
+        "Country": "Germany"
+    },
+    "approvalstep": "LocalManager",
+    "History": null,
+    "internal": null
+}
