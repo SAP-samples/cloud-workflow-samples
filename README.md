@@ -1,3 +1,4 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-workflow-samples)](https://api.reuse.software/info/github.com/SAP-samples/cloud-workflow-samples)
 
 # SAP Workflow Service Sample Applications
 
