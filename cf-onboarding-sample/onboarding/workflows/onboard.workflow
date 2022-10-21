@@ -115,7 +115,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"userInterface": "sapui5://comsapbpmworkflow.comsapbpmwusformplayer/com.sap.bpm.wus.form.player",
-			"recipientUsers": "${context.empData.buddies}, ${info.startedBy}",
+			"recipientUsers": "${context.buddyId}, ${info.startedBy}",
 			"formReference": "/forms/ConfirmOrChangeEquipment.form",
 			"userInterfaceParams": [{
 				"key": "formId",
@@ -135,7 +135,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"userInterface": "sapui5://comsapbpmworkflow.comsapbpmwusformplayer/com.sap.bpm.wus.form.player",
-			"recipientUsers": "${info.startedBy}",
+			"recipientUsers": "${context.managerId}, ${info.startedBy}",
 			"formReference": "/forms/ApproveEquipment.form",
 			"userInterfaceParams": [{
 				"key": "formId",
@@ -155,7 +155,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"userInterface": "sapui5://comsapbpmworkflow.comsapbpmwusformplayer/com.sap.bpm.wus.form.player",
-			"recipientUsers": "${context.empData.buddies},${info.startedBy}",
+			"recipientUsers": "${context.buddyId}, ${info.startedBy}",
 			"formReference": "/forms/AcceptWorkplace.form",
 			"userInterfaceParams": [{
 				"key": "formId",

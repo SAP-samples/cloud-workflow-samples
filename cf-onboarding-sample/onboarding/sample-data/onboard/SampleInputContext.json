@@ -1,7 +1,7 @@
 {
 	"managerId": "john.edrich@sapdemo.com",
 	"buddyId": "lorin.mathew@sapdemo.com",
-	"userId": "cgrant1",
+	"userId": "carla.grant@sapdemo.com",
 	"empData": {
 		"d": {
 			"results": [{
@@ -14,7 +14,7 @@
 				"jobTitle": "General Manager, Industries",
 				"jobCode": "Vice President, Sales (VP-SALES)",
 				"title": "VP, Sales",
-				"userId": "cgrant1",
+				"userId": "carla.grant@sapdemo.com",
 				"division": "Industries (IND)",
 				"defaultFullName": "Carla Grant",
 				"firstName": "Carla",
@@ -30,7 +30,7 @@
 							"jobTitle": "VP, Sales",
 							"countryOfCompany": "USA",
 							"jobCode": "VP-SALES",
-							"managerId": "athompson1",
+							"managerId": "john.edrich@sapdemo.com",
 							"division": "IND",
 							"company": "ACE_USA",
 							"position": "VP_SALES",
@@ -53,21 +53,20 @@
 						"__metadata": {
 							"type": "SFOData.User"
 						},
-						"userId": "dsharp1"
+						"userId": "d.sharp@sapdemo.com"
 					}, {
 						"__metadata": {
 							"type": "SFOData.User"
 						},
-						"userId": "cgrant1"
+						"userId": "carla.grant@sapdemo.com"
 					}, {
 						"__metadata": {
 							"type": "SFOData.User"
 						},
-						"userId": "sthomas1"
+						"userId": "s.thomas@sapdemo.com"
 					}]
 				}
 			}
-		},
-		"buddies": "dsharp1,cgrant1,sthomas1"
+		}
 	}
 }
